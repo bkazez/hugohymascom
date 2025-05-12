@@ -13,3 +13,15 @@ fach: tenor
 description: British tenor Hugo Hymas is in much demand for his interpretations of the baroque and renaissance repertoire and enjoys collaborations with the foremost practitioners of the genre.
 
 sitemap_ignore_regex: (\.(css|js|eot|svg|woff|ttf|png|jpg|jpeg|gif|yml|mp3|zip|ics|keep|xml|ico|google)$|robots|error|widgets|tech|webmanifest)
+
+nav:
+  - title: About
+    path: /about
+  - title: Videos
+    path: /videos
+  - title: Calendar
+    path: /calendar
+  - title: Press
+    path: /press
+  - title: Contact
+    path: /contact

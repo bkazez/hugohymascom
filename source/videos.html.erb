@@ -7,11 +7,11 @@ title: Videos
       <div class="video-card">
         <lite-youtube
           videoid="<%= video[:media] %>"
-          playlabel="<%= video_title(video) %>"
+          playlabel="<%= video[:title] %>"
           posterquality="maxresdefault"
           params="rel=0"
           ></lite-youtube>
-        <div class="video-title"><%= video_title(video) %></div>
+        <div class="video-title"><%= video[:title] %></div>
 
         <% if video[:credit].present? %>
           <div class="credit"><%= video[:credit] %></p>

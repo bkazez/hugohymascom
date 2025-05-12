@@ -12,3 +12,4 @@ gem 'icalendar', '~> 2.5'
 gem 'builder', '~> 3.0'
 gem 'redcarpet'
 gem 'rubyzip', '~> 2.3'
+gem 'ffi', '< 1.17' # for netlify

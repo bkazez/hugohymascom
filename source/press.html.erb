@@ -14,7 +14,7 @@ end
   <div class="col-12">
     <div class="text-width events">
       <h2>Press</h2>
-      <p><%= data.reviews.join("<br>\n").join("</p>\n\n<p>") %></p>
+      <p><%= reviews.map { |review| review.join("<br>\n") }.join("</p>\n\n<p>") %></p>
     </div>
   </div>
 </div>

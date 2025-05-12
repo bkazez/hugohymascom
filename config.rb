@@ -12,10 +12,6 @@ configure :build do
   activate :minify_html
 end
 
-activate :i18n do |options|
-  options.no_fallbacks = true
-end
-
 activate :directory_indexes
 activate :meta_tags
 
@@ -92,7 +88,6 @@ helpers do
     html.gsub!('St ', 'St&nbsp;')
     html.gsub!('B ', 'B&nbsp;') # B minor mass
     html.gsub!('Sir John Eliot', 'Sir&nbsp;John&nbsp;Eliot')
-    html.gsub!('Hugo Hymas', 'Ben&nbsp;Kazez')
 
     return html
   end

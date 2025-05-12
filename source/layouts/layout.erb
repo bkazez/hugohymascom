@@ -16,10 +16,10 @@
     <%= auto_display_meta_tags separator: '·' %>
 
 
-    <meta property="profile:first_name" content="<%= current_page.data.site.first_name %>">
-    <meta property="profile:last_name" content="<%= current_page.data.site.last_name %>">
-    <meta property="profile:username" content="<%= current_page.data.site.username %>">
-    <meta property="profile:gender" content="<%= current_page.data.site.gender %>">
+    <meta property="profile:first_name" content="<%= data.site.first_name %>">
+    <meta property="profile:last_name" content="<%= data.site.last_name %>">
+    <meta property="profile:username" content="<%= data.site.username %>">
+    <meta property="profile:gender" content="<%= data.site.gender %>">
 
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
@@ -31,10 +31,21 @@
       <div class="container">
         <div class="row header">
           <div class="col-md">
-            <h1><a href="/"><%= current_page.data.site.name %> <div class="voice-type d-inline"><%= current_page.data.site.fach %></div></a></h1>
+            <h1><a href="/"><%= data.site.name %> <div class="voice-type d-inline"><%= data.site.fach %></div></a></h1>
           </div>
           <div class="col-md">
-            <%= partial(:nav) %>
+            <nav class="nav">
+              <div class="hamburger-menu">
+                <% data.site.nav.each do |_item| %>
+                  <div></div>
+                <% end %>
+              </div>
+              <ul>
+                <% data.site.nav.each do |item| %>
+                  <li><%= link_to item.title, item.path %></li>
+                <% end %>
+              </ul>
+            </nav>
           </div>
         </div>
 
@@ -43,9 +54,9 @@
     </div>
 
     <section class="footer text-center">
-      <%= contact_cta if !current_page.data.hide_contact_footer %>
+      <%# contact_cta if !current_page.data.hide_contact_footer %>
       <div class="copyright mt-5">
-        © Copyright <%= Time.new.year %> by <%= current_page.data.site.name %><br>
+        © Copyright <%= Time.new.year %> by <%= data.site.name %><br>
       </div>
     </section>
 
