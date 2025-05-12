@@ -2,9 +2,9 @@ Haydn – Die Schöpfung – Les Arts Florissants / William Christie
 **The English tenor Hugo Hymas brought poignant vocal colors and melting tenderness to his performance.**
 _New York Times_, 16 November 2018
 
-Purcell - _Ode to St Cecilia’s Day – Freiburg Baroque / Kristian Bezuidenhout
+Purcell - _Ode to St Cecilia’s Day_ – Freiburg Baroque / Kristian Bezuidenhout
 **If I had to pick out one sublime moment it would be tenor Hugo Hymas’s rendition of Beauty thou Scene of Love in Purcell’s Ode.**
-_The Telegraph, 23 November 2022
+_The Telegraph_, 23 November 2022
 
 Bach & Caldara - Dunedin Consort / John Butt
 **Standing out among the singers, the tenor Hugo Hymas disclosed a bloom at the top of his voice.**
