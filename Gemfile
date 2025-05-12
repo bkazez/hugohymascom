@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'middleman', '~> 4.6'
 gem 'middleman-livereload'
 gem 'middleman-meta-tags'
-gem 'middleman-imageoptim', :git => 'https://github.com/plasticine/middleman-imageoptim', :branch => 'master'
 gem 'middleman-minify-html'
 
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
