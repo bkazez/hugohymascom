@@ -26,12 +26,14 @@
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
   </head>
-  <body class="mb-5 <%= "hide_header_and_footer" if current_page.data.hide_header_and_footer %> <%= current_page.data.css_class || '' %>">
+  <body class="mb-5 <%= "hide_header" if current_page.data.hide_header %> <%= current_page.data.css_class || '' %>">
     <div class="container-bg">
       <div class="container">
         <div class="row header">
           <div class="col-md">
-            <h1><a href="/"><%= data.site.name %> <div class="voice-type d-inline"><%= data.site.fach %></div></a></h1>
+            <h1>
+              <%= current_page.url == '/' ? data.site.name : link_to(data.site.name, '/') %>
+            </h1>
           </div>
           <div class="col-md">
             <nav class="nav">
