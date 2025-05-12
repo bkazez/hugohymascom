@@ -262,6 +262,7 @@ h1 a {
     font-weight: 700;
     line-height: 1; /* Set line-height to 1 */
     margin-bottom: $body-line-height;
+    font-weight: bold;
 
     .voice-type {
         text-transform: lowercase;
@@ -377,7 +378,8 @@ h2 {
     font-size: $body-font-size;
     margin-top: $body-line-height * 2;
     margin-bottom: $body-line-height;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: normal;
 }
 
 h2:first-child {
