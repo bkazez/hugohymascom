@@ -2,8 +2,8 @@ $accent-color: #0084ff;
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 @function toRem($size) {
-    $remValue: $size / 16 * 1rem;
-    @return $remValue;
+  $remValue: $size / 16 * 1rem;
+  @return $remValue;
 }
 
 $body-font-size: toRem(18);
@@ -22,540 +22,500 @@ $audio-width: 500px;
 $quotation-mark-width: 0.65rem;
 
 @mixin all-small-caps {
-    text-transform: lowercase;
-    -moz-font-feature-settings: "smcp";
-    -webkit-font-feature-settings: "smcp";
-    -ms-font-feature-settings: "smcp";
-    font-feature-settings: "smcp";
+  text-transform: lowercase;
+  -moz-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  -ms-font-feature-settings: "smcp";
+  font-feature-settings: "smcp";
 }
 
 @mixin oldstyle-nums {
-    font-variant-numeric: oldstyle-nums;
-    -moz-font-feature-settings: "onum";
-    -ms-font-feature-settings: "onum";
-    -o-font-feature-settings: "onum";
-    -webkit-font-feature-settings: "onum";
-    font-feature-settings: "onum";
+  font-variant-numeric: oldstyle-nums;
+  -moz-font-feature-settings: "onum";
+  -ms-font-feature-settings: "onum";
+  -o-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum";
 }
 
 @mixin common-ligatures {
-    font-variant-ligatures: common-ligatures;
-    -moz-font-feature-settings: "liga";
-    -webkit-font-feature-settings: "liga";
-    -ms-font-feature-settings: "liga";
-    font-feature-settings: "liga";
+  font-variant-ligatures: common-ligatures;
+  -moz-font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga";
+  font-feature-settings: "liga";
 }
 
 .acronym {
-    @include all-small-caps;
-    letter-spacing: 0.2px;
+  @include all-small-caps;
+  letter-spacing: 0.2px;
 }
 
 body {
-    background-color: $body-background-color;
-    font-family: "EB Garamond", serif;
-    line-height: $body-line-height;
-    font-size: $body-font-size;
-    text-rendering: geometricPrecision;
-    @include oldstyle-nums;
-    @include common-ligatures;
+  background-color: $body-background-color;
+  font-family: "EB Garamond", serif;
+  line-height: $body-line-height;
+  font-size: $body-font-size;
+  text-rendering: geometricPrecision;
+  @include oldstyle-nums;
+  @include common-ligatures;
 }
 
 body.home {
-    .header {
-        text-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
-    }
+  .header {
+    text-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
+  }
 
-    .footer {
-        border-top: none;
-        margin-top: 0;
-        padding-top: 0;
-    }
+  .footer {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
 }
 
 @media (min-width: 655px) {
-    .container-fluid {
-        padding-top: 3rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+  .container-fluid {
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .container-bg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .home {
-    .container-bg {
-        background: url("/images/slo.jpg") no-repeat center 45% / cover;
-        height: 1200px;
-    }
+  .container-bg {
+    background: url("/images/slo.jpg") no-repeat center 45% / cover;
+    height: 1200px;
+  }
 
-    .header,
-    .footer,
-    a {
-        color: white !important;
-    }
+  .header,
+  .footer,
+  a {
+    color: white !important;
+  }
 
-    .hamburger-menu div {
-        background: white;
-    }
+  .hamburger-menu div {
+    background: white;
+  }
 }
 
 /***********************************/
 
 /* Styling for the hamburger menu */
 .hamburger-menu {
-    position: fixed; /* This makes the hamburger menu stay at the same place even when the page is scrolled */
-    top: 35px;
-    right: 20px;
-    width: 30px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer; /* Changes the cursor to a hand when hovering over the hamburger menu */
-    pointer-events: auto;
+  position: fixed; /* This makes the hamburger menu stay at the same place even when the page is scrolled */
+  top: 35px;
+  right: 20px;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer; /* Changes the cursor to a hand when hovering over the hamburger menu */
+  pointer-events: auto;
 }
 
 /* Each line in the hamburger menu */
 .hamburger-menu div {
-    width: 100%;
-    height: 3.5px;
-    background: black;
-    transition: all 0.3s; /* Smoothens the transition when the hamburger menu turns into an X */
+  width: 100%;
+  height: 3.5px;
+  background: black;
+  transition: all 0.3s; /* Smoothens the transition when the hamburger menu turns into an X */
 }
 
 /* Animations for turning the hamburger menu into an X */
 .hamburger-menu.open div:nth-child(1) {
-    transform: rotate(
-        45deg
+  transform: rotate(
+    45deg
     ); /* Rotate the top bar to form one diagonal of the X */
-    position: relative;
-    top: 8px; /* Adjust position to meet the other bar in the middle */
+  position: relative;
+  top: 8px; /* Adjust position to meet the other bar in the middle */
 }
 .hamburger-menu.open div:nth-child(2) {
-    opacity: 0; /* The middle line disappears */
+  opacity: 0; /* The middle line disappears */
 }
 .hamburger-menu.open div:nth-child(3) {
-    transform: rotate(
-        -45deg
+  transform: rotate(
+    -45deg
     ); /* Rotate the bottom bar to form the other diagonal of the X */
-    position: relative;
-    top: -8px; /* Adjust position to meet the other bar in the middle */
+  position: relative;
+  top: -8px; /* Adjust position to meet the other bar in the middle */
 }
 
 /* Styling for the navigation menu */
 .nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh; /* Otherwise you can't click links beneath it */
-    background: rgba(0, 0, 0, 0); /* Initial background is fully transparent */
-    transition: background 0.2s cubic-bezier(0.42, 0, 0.58, 1); /* Smoothens the transition when the menu slides in */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh; /* Otherwise you can't click links beneath it */
+  background: rgba(0, 0, 0, 0); /* Initial background is fully transparent */
+  transition: background 0.2s cubic-bezier(0.42, 0, 0.58, 1); /* Smoothens the transition when the menu slides in */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  pointer-events: none;
 }
 
 .nav.show {
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.9);
-    pointer-events: auto;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  pointer-events: auto;
 }
 
 .header a {
-    color: black;
+  color: black;
 }
 
 /* Each line in the navigation menu */
 .nav ul {
-    list-style: none;
-    display: flex;
-    padding-top: 5px;
-    padding-left: 0.5rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    opacity: 0;
-    transform: translateY(-200px);
-    transition:
-        opacity 0.35s,
-        transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-    font-weight: bold;
-    font-size: 1.25rem;
+  list-style: none;
+  display: flex;
+  padding-top: 5px;
+  padding-left: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  opacity: 0;
+  transform: translateY(-200px);
+  transition:
+  opacity 0.35s,
+  transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 /* Makes the navigation menu visible and slide down when the hamburger menu is clicked */
 .nav.show ul {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .nav li {
-    text-indent: 0;
-    padding-left: 0;
+  text-indent: 0;
+  padding-left: 0;
 }
 
 .home .nav.show {
-    background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .nav.show .hamburger-menu {
-    position: absolute; /* This makes the hamburger menu move with the nav menu */
+  position: absolute; /* This makes the hamburger menu move with the nav menu */
 }
 
 /* Changes the layout for desktop screens and tablets in landscape orientation */
 @media (min-width: 768px) {
-    /* The hamburger menu disappears */
-    .hamburger-menu {
-        display: none;
-    }
+  /* The hamburger menu disappears */
+  .hamburger-menu {
+    display: none;
+  }
 
-    /* The navigation menu becomes a horizontal bar at the top */
-    .nav {
-        position: initial;
-        background: none;
-        height: auto;
-        pointer-events: auto;
-    }
+  /* The navigation menu becomes a horizontal bar at the top */
+  .nav {
+    position: initial;
+    background: none;
+    height: auto;
+    pointer-events: auto;
+  }
 
-    /* The lines in the navigation menu line up horizontally with 1rem of space between each one */
-    .nav ul {
-        flex-direction: row;
-        opacity: 1;
-        transform: translateY(0);
-    }
+  /* The lines in the navigation menu line up horizontally with 1rem of space between each one */
+  .nav ul {
+    flex-direction: row;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /*********************/
 
 .footer {
-    padding-top: $body-line-height * 2;
-    z-index: 999;
+  padding-top: $body-line-height * 2;
+  z-index: 999;
 }
 
 body.generic {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .hide_header .header {
-    display: none;
+  display: none;
 }
 
 h1,
 h1 a {
-    font-size: 1.8125rem;
-    font-weight: 700;
-    line-height: 1; /* Set line-height to 1 */
-    margin-bottom: $body-line-height;
-    font-weight: bold;
+  font-size: 1.8125rem;
+  font-weight: 700;
+  line-height: 1; /* Set line-height to 1 */
+  margin-bottom: $body-line-height;
+  font-weight: bold;
 
-    .voice-type {
-        text-transform: lowercase;
-    }
+  .voice-type {
+    text-transform: lowercase;
+  }
 }
 
 .text-width p {
-    max-width: $text-width;
+  max-width: $text-width;
 }
 
 img.flow {
-    width: 100%;
+  width: 100%;
 }
 
 @media (min-width: 430px) {
-    .cropper {
-        display: block;
-        max-height: none;
-        float: right;
-        width: 50%;
-        min-width: 200px;
-        margin-left: 2rem;
-    }
+  .cropper {
+    display: block;
+    max-height: none;
+    float: right;
+    width: 50%;
+    min-width: 200px;
+    margin-left: 2rem;
+  }
 }
 
 .embed-responsive {
-    margin-bottom: $body-line-height;
-    max-width: calc(100% - 2rem);
+  margin-bottom: $body-line-height;
+  max-width: calc(100% - 2rem);
 }
 
 .btn-secondary {
-    background-color: $accent-color;
-    border-color: $accent-color;
-    border-radius: 2rem;
-    padding: 0.5rem 1.2rem;
+  background-color: $accent-color;
+  border-color: $accent-color;
+  border-radius: 2rem;
+  padding: 0.5rem 1.2rem;
 }
 
 h2 {
-    padding-top: $leadin-line-height;
-    font-size: $body-font-size;
-    margin-top: $body-line-height * 2;
-    margin-bottom: $body-line-height;
-    font-size: 2rem;
-    font-weight: normal;
+  padding-top: $leadin-line-height;
+  font-size: $body-font-size;
+  margin-top: $body-line-height * 2;
+  margin-bottom: $body-line-height;
+  font-size: 2rem;
+  font-weight: normal;
 }
 
 h2:first-child {
-    margin-top: $leadin-line-height;
+  margin-top: $leadin-line-height;
 }
 
 h3 {
-    font-size: $body-font-size;
-    margin-top: 2 * $body-line-height;
-    margin-bottom: $body-line-height;
-    line-height: $body-line-height;
-    text-transform: uppercase;
+  font-size: $body-font-size;
+  margin-top: 2 * $body-line-height;
+  margin-bottom: $body-line-height;
+  line-height: $body-line-height;
+  text-transform: uppercase;
 }
 
 .events h3 {
-    text-transform: none;
-    margin-top: $body-line-height;
-    margin-bottom: 0;
+  text-transform: none;
+  margin-top: $body-line-height;
+  margin-bottom: 0;
 }
 
 h3:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .col {
-    padding: 0;
+  padding: 0;
 }
 
 /* Needed to undo css reboot without breaking /distractionblock */
 a,
 a:not([href]):not([tabindex]) {
-    color: $accent-color;
-    font-weight: normal;
-    &:hover {
-        @extend a;
-        text-decoration: underline !important;
-    }
+  color: $accent-color;
+  font-weight: normal;
+  &:hover {
+    @extend a;
+    text-decoration: underline !important;
+  }
 }
 
 a.btn-arrow:hover {
-    text-decoration: none !important;
-    .title {
-        text-decoration: underline !important;
-    }
+  text-decoration: none !important;
+  .title {
+    text-decoration: underline !important;
+  }
 }
 
 a.btn {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 li {
-    text-indent: -1rem;
-    padding-left: 2rem;
+  text-indent: -1rem;
+  padding-left: 2rem;
 }
 
 /* Photos */
 
 .photo-card {
-    text-align: left;
+  text-align: left;
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
 
 .photos img:not(:first-child) {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .img-flow {
-    max-width: 100%;
-    float: none;
-    margin-bottom: 1rem;
+  max-width: 100%;
+  float: none;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 577px) {
-    /* one pixel above Bootstrap's small screen breakpoint */
-    .img-flow {
-        max-width: 40vw;
-        margin-left: 2rem;
-        margin-bottom: 2rem;
-    }
+  /* one pixel above Bootstrap's small screen breakpoint */
+  .img-flow {
+    max-width: 40vw;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Events */
 
 .events {
-    ul {
-        margin: 0;
-    }
+  ul {
+    margin: 0;
+  }
 
-    .event-container {
-        margin-bottom: $body-line-height;
-    }
+  .event-container {
+    margin-bottom: $body-line-height;
+  }
 
-    img {
-        margin-top: 2rem;
-    }
+  img {
+    margin-top: 2rem;
+  }
 
-    .event.rep,
-    .event.group,
-    .event.leader,
-    .event.status {
-        color: $text-color-grey;
-    }
+  .event.rep,
+  .event.group,
+  .event.leader,
+  .event.status {
+    color: $text-color-grey;
+  }
 }
 
 /* Videos */
 
 lite-youtube {
-    text-align: left;
+  text-align: left;
 }
 
 lite-youtube::before {
-    background-image: none !important;
+  background-image: none !important;
 }
 
 .photo-card {
-    margin-top: $body-line-height * 2;
+  margin-top: $body-line-height * 2;
 }
 
 .video-card {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: $body-line-height * 3;
-    max-width: $video-width;
-    text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $body-line-height * 3;
+  max-width: $video-width;
+  text-align: left;
 
-    .video-title {
-        padding-top: 1rem;
-        font-size: $body-font-size;
-    }
+  .video-title {
+    padding-top: 1rem;
+    font-size: $body-font-size;
+  }
 
-    .credit {
-        font-size: 1rem;
-        margin-top: 0.1rem;
-    }
+  .credit {
+    font-size: 1rem;
+    margin-top: 0.1rem;
+  }
 }
 
 .engineering .video-card {
-    margin-left: 0;
-    margin-right: auto;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .credit {
-    opacity: 0.75;
-    font-size: 0.8rem;
-    font-weight: normal;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-}
-
-/* Repertoire */
-
-.repertoire .contents {
-    column-width: 350px;
-    column-gap: 2rem;
-    .repertoire-group {
-        -webkit-column-break-inside: avoid;
-        page-break-inside: avoid;
-        break-inside: avoid;
-    }
-
-    li {
-        padding-left: 1rem;
-    }
-}
-
-/* Plyr customization */
-
-.plyr--audio .plyr__controls {
-    background: none;
-    padding: 0;
-    transition: none;
-}
-
-.plyr input[type="range"] {
-    color: $accent-color;
-    transition: none;
-}
-
-.plyr__control,
-.plyr--audio .plyr__control:hover {
-    color: $accent-color;
-    background: none;
-    transition: none;
+  opacity: 0.75;
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 /* Distractionblock */
 $dblock-shadow-radius: 0.65rem;
 
 .demo .col:first-child {
-    padding-left: $dblock-shadow-radius;
-    padding-right: 1rem;
+  padding-left: $dblock-shadow-radius;
+  padding-right: 1rem;
 }
 
 /* allow room for shadow */
 .demo .col:last-child {
-    padding-right: $dblock-shadow-radius;
+  padding-right: $dblock-shadow-radius;
 }
 
 /* Print */
 @media print {
-    #media,
-    #events-past {
-        display: none;
-    }
+  #media,
+  #events-past {
+    display: none;
+  }
 
-    .read-more {
-        display: none !important;
-    }
+  .read-more {
+    display: none !important;
+  }
 }
 
 /* Homepage */
 .home {
-    .container {
-        padding-top: 0;
+  .container {
+    padding-top: 0;
+  }
+
+  .row.header {
+    background-image: url('/images/about.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* adjustable */
+    max-height: 800px;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    padding-top: 2rem;
+
+    h1 {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      margin: 0;
+      font-size: 3em;
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.row.header {
-  background-image: url('/images/about.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 70vh; /* adjustable */
-  max-height: 800px;
-  min-height: 300px;
-  position: relative;
-}
-
-.row.header h1 {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  margin: 0;
-  font-size: 3em;
-  font-family: 'EB Garamond', serif;
-  font-weight: 600;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  }
 }
 
 section+section {
-    margin-top: $body-line-height * 3 !important;
-    border-top: $separator-border;
-    padding-bottom: 2rem;
+  margin-top: $body-line-height * 3 !important;
+  border-top: $separator-border;
+  padding-bottom: 2rem;
 }
 
 .scroll-row {
