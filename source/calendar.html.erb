@@ -4,10 +4,10 @@ title: t:calendar
 <div class="row pt-2 g-4">
   <div class="col-12">
     <div class="text-width events">
-      <h2><%= t(:upcoming) %></h2>
+      <h2>Upcoming</h2>
 
       <div class="cropper">
-        <img src="/images/bcn-caixa.jpg" class="flow">
+        <img src="/images/pages/calendar.jpg" class="flow">
       </div>
 
       <% future_events(data.events).each do |event| %>
@@ -15,13 +15,6 @@ title: t:calendar
       <% end %>
 
       <p>Additional performances will be announced shortly.</p>
-
-      <section id="events-recent">
-        <h2><%= t(:recent) %></h2>
-        <% past_events(data.events).reverse.each do |event| %>
-          <%= partial(:event, locals: { event: event }) %>
-        <% end %>
-      </section>
     </div>
   </div>
 </div>

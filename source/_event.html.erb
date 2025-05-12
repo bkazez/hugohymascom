@@ -1,0 +1,33 @@
+<div class="event-container">
+  <% if data.site.show_event_images && sitemap.find_resource_by_path(event_image_path(event)) %>
+    <img src="<%= event_image_path(event) %>">
+  <% end %>
+
+  <h3 class="event date">
+    <%= event.date.strftime('%-d') + ' ' + event.date.strftime('%B') + ' ' + event.date.strftime('%Y') %>
+  </h3>
+
+  <div class="event venue"><%= event.venue %></div>
+
+  <% array_wrap(event.rep).each do |rep| %>
+    <div class="event rep">
+      <%= parse_rep(rep) %>
+    </div>
+  <% end %>
+
+  <% array_wrap(event.group).each do |group| %>
+    <div class="event group"><%= group %></div>
+  <% end %>
+
+  <% if event.leader %>
+    <div class="event leader">
+      <%= parse_leader(event.leader) %>
+    </div>
+  <% end %>
+
+  <% if data.site.show_event_images && event.image_caption.present? %>
+    <p class="caption mt-1">
+      <%= event.image_caption %>
+    </p>
+  <% end %>
+</div>
