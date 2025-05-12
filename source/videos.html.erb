@@ -1,0 +1,22 @@
+---
+title: Videos
+---
+<div class="row media">
+  <div class="text-center col-md-12">
+    <% data.media.each do |video| %>
+      <div class="video-card">
+        <lite-youtube
+          videoid="<%= video[:media] %>"
+          playlabel="<%= video_title(video) %>"
+          posterquality="maxresdefault"
+          params="rel=0"
+          ></lite-youtube>
+        <div class="video-title"><%= video_title(video) %></div>
+
+        <% if video[:credit].present? %>
+          <div class="credit"><%= video[:credit] %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

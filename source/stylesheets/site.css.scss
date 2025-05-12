@@ -1,0 +1,675 @@
+$accent-color: #0084ff;
+
+@function toRem($size) {
+    $remValue: $size / 16 * 1rem;
+    @return $remValue;
+}
+
+$body-font-size: toRem(18);
+$body-line-height: toRem(25);
+
+$leadin-font-size: toRem(18); // 21/29
+$leadin-line-height: toRem(25);
+
+$body-background-color: #f7f7f7;
+$separator-border: 0.5px solid #d9d9d9;
+$container-fluid-width: 1100px;
+$text-color-grey: #757575;
+$text-width: 65ch;
+$video-width: 800px;
+$audio-width: 500px;
+$quotation-mark-width: 0.65rem;
+
+/* @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=db5209ff-6615-4373-ab4d-d9a1bdb5176d&fontids=1122658,1437536,1437546"); */
+@font-face {
+    font-family: "Avenir Next Bold";
+    src:
+        url("/fonts/1122658/9e20d350-02ed-419e-8306-41e8fddafb4e.woff2")
+            format("woff2"),
+        url("Fonts/1122658/9ddb7916-058a-4e43-9880-dcb237ef42b6.woff")
+            format("woff");
+}
+@font-face {
+    font-family: "Avenir Next Medium";
+    src:
+        url("/fonts/1437536/91e99835-1d11-4c71-af9b-aed2a94329e7.woff2")
+            format("woff2"),
+        url("Fonts/1437536/4952d2e1-e0c0-46ca-b32e-c24a5882c471.woff")
+            format("woff");
+}
+@font-face {
+    font-family: "Avenir Next Medium Italic";
+    src:
+        url("/fonts/1437546/43571193-6de1-4dac-b2a5-e8365cb9dc0e.woff2")
+            format("woff2"),
+        url("Fonts/1437546/8be8a73f-6804-4351-b8e1-ff88ed20425b.woff")
+            format("woff");
+}
+
+@mixin all-small-caps {
+    text-transform: lowercase;
+    -moz-font-feature-settings: "smcp";
+    -webkit-font-feature-settings: "smcp";
+    -ms-font-feature-settings: "smcp";
+    font-feature-settings: "smcp";
+}
+
+@mixin oldstyle-nums {
+    font-variant-numeric: oldstyle-nums;
+    -moz-font-feature-settings: "onum";
+    -ms-font-feature-settings: "onum";
+    -o-font-feature-settings: "onum";
+    -webkit-font-feature-settings: "onum";
+    font-feature-settings: "onum";
+}
+
+@mixin common-ligatures {
+    font-variant-ligatures: common-ligatures;
+    -moz-font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+}
+
+.acronym {
+    @include all-small-caps;
+    letter-spacing: 0.2px;
+}
+
+body {
+    background-color: $body-background-color;
+    font-family: "Avenir Next Medium", "Avenir Medium", "Helvetica Neue",
+        Helvetica, sans-serif;
+    line-height: $body-line-height;
+    font-size: $body-font-size;
+    text-rendering: geometricPrecision;
+    @include oldstyle-nums;
+    @include common-ligatures;
+}
+
+em {
+    font-family: "Avenir Next Medium Italic", "Avenir Medium Italic",
+        "Helvetica Neue Italic", "Helvetica Italic", sans-serif;
+    font-style: normal !important;
+}
+
+body.home {
+    background-color: black;
+
+    .header {
+        text-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+}
+
+@media (min-width: 655px) {
+    .container-fluid {
+        padding-top: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.container-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.home {
+    .container-bg {
+        background: url("/images/slo.jpg") no-repeat center 45% / cover;
+        height: 1200px;
+    }
+
+    .header,
+    .footer,
+    a {
+        color: white !important;
+    }
+
+    .hamburger-menu div {
+        background: white;
+    }
+}
+
+/***********************************/
+
+/* Styling for the hamburger menu */
+.hamburger-menu {
+    position: fixed; /* This makes the hamburger menu stay at the same place even when the page is scrolled */
+    top: 35px;
+    right: 20px;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer; /* Changes the cursor to a hand when hovering over the hamburger menu */
+    pointer-events: auto;
+}
+
+/* Each line in the hamburger menu */
+.hamburger-menu div {
+    width: 100%;
+    height: 3.5px;
+    background: black;
+    transition: all 0.3s; /* Smoothens the transition when the hamburger menu turns into an X */
+}
+
+/* Animations for turning the hamburger menu into an X */
+.hamburger-menu.open div:nth-child(1) {
+    transform: rotate(
+        45deg
+    ); /* Rotate the top bar to form one diagonal of the X */
+    position: relative;
+    top: 8px; /* Adjust position to meet the other bar in the middle */
+}
+.hamburger-menu.open div:nth-child(2) {
+    opacity: 0; /* The middle line disappears */
+}
+.hamburger-menu.open div:nth-child(3) {
+    transform: rotate(
+        -45deg
+    ); /* Rotate the bottom bar to form the other diagonal of the X */
+    position: relative;
+    top: -8px; /* Adjust position to meet the other bar in the middle */
+}
+
+/* Styling for the navigation menu */
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh; /* Otherwise you can't click links beneath it */
+    background: rgba(0, 0, 0, 0); /* Initial background is fully transparent */
+    transition: background 0.2s cubic-bezier(0.42, 0, 0.58, 1); /* Smoothens the transition when the menu slides in */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.nav.show {
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+    pointer-events: auto;
+}
+
+.header a {
+    color: black;
+}
+
+/* Each line in the navigation menu */
+.nav ul {
+    list-style: none;
+    display: flex;
+    padding-top: 5px;
+    padding-left: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(-200px);
+    transition:
+        opacity 0.35s,
+        transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* Makes the navigation menu visible and slide down when the hamburger menu is clicked */
+.nav.show ul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav li {
+    text-indent: 0;
+    padding-left: 0;
+}
+
+.home .nav.show {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.nav.show .hamburger-menu {
+    position: absolute; /* This makes the hamburger menu move with the nav menu */
+}
+
+/* Changes the layout for desktop screens and tablets in landscape orientation */
+@media (min-width: 768px) {
+    /* The hamburger menu disappears */
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* The navigation menu becomes a horizontal bar at the top */
+    .nav {
+        position: initial;
+        background: none;
+        height: auto;
+        pointer-events: auto;
+    }
+
+    /* The lines in the navigation menu line up horizontally with 1rem of space between each one */
+    .nav ul {
+        flex-direction: row;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*********************/
+
+.footer {
+    padding-top: $body-line-height * 2;
+    z-index: 999;
+}
+
+body.generic {
+    margin-top: 0;
+}
+
+.hide_header_and_footer .header,
+.hide_header_and_footer .footer {
+    display: none;
+}
+
+h1,
+h1 a {
+    text-transform: uppercase;
+    font-size: 1.8125rem;
+    font-weight: 700;
+    line-height: 1; /* Set line-height to 1 */
+    margin-bottom: $body-line-height;
+
+    .voice-type {
+        text-transform: lowercase;
+    }
+}
+
+section:not(:first-child) {
+    margin-top: $body-line-height * 3 !important;
+    border-top: $separator-border;
+}
+
+img + section {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.text-width p {
+    max-width: $text-width;
+}
+
+img.flow {
+    width: 100%;
+}
+
+@media (min-width: 430px) {
+    .cropper {
+        display: block;
+        max-height: none;
+        float: right;
+        width: 50%;
+        min-width: 200px;
+        margin-left: 2rem;
+    }
+}
+
+img.hero {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.embed-responsive {
+    margin-bottom: $body-line-height;
+    max-width: calc(100% - 2rem);
+}
+
+img.hero,
+.embed-responsive {
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-secondary {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    border-radius: 2rem;
+    padding: 0.5rem 1.2rem;
+}
+
+/* Hero image */
+
+.hero-side {
+    margin-bottom: $body-line-height;
+}
+
+div.hero {
+    position: relative;
+    margin-bottom: $body-line-height;
+    overflow: hidden;
+}
+
+div.hero > img {
+    margin: 0 auto;
+    position: relative;
+}
+
+@media screen {
+    div.hero {
+        max-height: calc(100vh - 12em);
+        min-height: 275px;
+        overflow-y: hidden;
+    }
+}
+
+.reviews {
+    margin-bottom: $body-line-height;
+    text-indent: -$quotation-mark-width;
+
+    .source {
+        font-style: italic;
+        color: $text-color-grey;
+        display: block;
+        text-indent: 0;
+    }
+}
+
+.bio .introduction {
+    font-size: $leadin-font-size;
+    line-height: $leadin-line-height;
+    p {
+        margin-bottom: $leadin-line-height;
+    }
+}
+
+span.small {
+    line-height: 1rem;
+}
+
+h2 {
+    padding-top: $leadin-line-height;
+    font-size: $body-font-size;
+    margin-top: $body-line-height * 2;
+    margin-bottom: $body-line-height;
+    font-size: 1.5rem;
+}
+
+h2:first-child {
+    margin-top: $leadin-line-height;
+}
+
+h3 {
+    font-size: $body-font-size;
+    margin-top: 2 * $body-line-height;
+    margin-bottom: $body-line-height;
+    line-height: $body-line-height;
+    text-transform: uppercase;
+}
+
+.events h3 {
+    text-transform: none;
+    margin-top: $body-line-height;
+    margin-bottom: 0;
+}
+
+h3:first-child {
+    margin-top: 0;
+}
+
+.col {
+    padding: 0;
+}
+
+/* Needed to undo css reboot without breaking /distractionblock */
+a,
+a:not([href]):not([tabindex]) {
+    color: $accent-color;
+    font-weight: normal;
+    &:hover {
+        @extend a;
+        text-decoration: underline !important;
+    }
+}
+
+a.btn-arrow:hover {
+    text-decoration: none !important;
+    .title {
+        text-decoration: underline !important;
+    }
+}
+
+a.btn {
+    font-weight: normal;
+}
+
+/* Accordion */
+
+:not(:target) .read-more {
+    display: block;
+}
+
+:target .read-more {
+    display: none;
+}
+
+:not(:target) .completion {
+    display: none;
+}
+
+:target .completion {
+    display: revert;
+}
+
+.read-more {
+    white-space: nowrap;
+}
+
+.copyright {
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+    opacity: 0.5;
+}
+
+.sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(237, 237, 237, 0.9);
+    z-index: 999;
+
+    h2 {
+        margin-top: 0;
+        border-top: none;
+    }
+}
+
+.caption {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    color: $text-color-grey;
+    max-width: $text-width;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+}
+
+li {
+    text-indent: -1rem;
+    padding-left: 2rem;
+}
+
+/* Photos */
+
+.photo-card {
+    text-align: left;
+
+    img {
+        width: 100%;
+    }
+}
+
+.photos img:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.img-flow {
+    max-width: 100%;
+    float: none;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 577px) {
+    /* one pixel above Bootstrap's small screen breakpoint */
+    .img-flow {
+        max-width: 40vw;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Events */
+
+.events {
+    ul {
+        margin: 0;
+    }
+
+    .event-container {
+        margin-bottom: $body-line-height;
+    }
+
+    img {
+        margin-top: 2rem;
+    }
+
+    .event.rep,
+    .event.group,
+    .event.leader,
+    .event.status {
+        color: $text-color-grey;
+    }
+}
+
+/* Videos */
+
+lite-youtube {
+    text-align: left;
+}
+
+lite-youtube::before {
+    background-image: none !important;
+}
+
+.photo-card {
+    margin-top: $body-line-height * 2;
+}
+
+.video-card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $body-line-height * 3;
+    max-width: $video-width;
+    text-align: left;
+
+    .video-title {
+        padding-top: 1rem;
+        font-size: $body-font-size;
+    }
+
+    .credit {
+        font-size: 1rem;
+        margin-top: 0.1rem;
+    }
+}
+
+.engineering .video-card {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.credit {
+    opacity: 0.75;
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* Repertoire */
+
+.repertoire .contents {
+    column-width: 350px;
+    column-gap: 2rem;
+    .repertoire-group {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    li {
+        padding-left: 1rem;
+    }
+}
+
+/* Plyr customization */
+
+.plyr--audio .plyr__controls {
+    background: none;
+    padding: 0;
+    transition: none;
+}
+
+.plyr input[type="range"] {
+    color: $accent-color;
+    transition: none;
+}
+
+.plyr__control,
+.plyr--audio .plyr__control:hover {
+    color: $accent-color;
+    background: none;
+    transition: none;
+}
+
+/* Distractionblock */
+$dblock-shadow-radius: 0.65rem;
+
+.demo .col:first-child {
+    padding-left: $dblock-shadow-radius;
+    padding-right: 1rem;
+}
+
+/* allow room for shadow */
+.demo .col:last-child {
+    padding-right: $dblock-shadow-radius;
+}
+
+/* Print */
+@media print {
+    #media,
+    #events-past {
+        display: none;
+    }
+
+    .read-more {
+        display: none !important;
+    }
+}

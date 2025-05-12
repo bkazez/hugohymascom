@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%# https://realfavicongenerator.net/ %>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#f5faf8">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <%= yield_content :head %>
+
+    <%= auto_display_meta_tags separator: '·' %>
+
+
+    <meta property="profile:first_name" content="<%= current_page.data.site.first_name %>">
+    <meta property="profile:last_name" content="<%= current_page.data.site.last_name %>">
+    <meta property="profile:username" content="<%= current_page.data.site.username %>">
+    <meta property="profile:gender" content="<%= current_page.data.site.gender %>">
+
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
+  </head>
+  <body class="mb-5 <%= "hide_header_and_footer" if current_page.data.hide_header_and_footer %> <%= current_page.data.css_class || '' %>">
+    <div class="container-bg">
+      <div class="container">
+        <div class="row header">
+          <div class="col-md">
+            <h1><a href="/"><%= current_page.data.site.name %> <div class="voice-type d-inline"><%= current_page.data.site.fach %></div></a></h1>
+          </div>
+          <div class="col-md">
+            <%= partial(:nav) %>
+          </div>
+        </div>
+
+        <%= yield %>
+      </div>
+    </div>
+
+    <section class="footer text-center">
+      <%= contact_cta if !current_page.data.hide_contact_footer %>
+      <div class="copyright mt-5">
+        © Copyright <%= Time.new.year %> by <%= current_page.data.site.name %><br>
+      </div>
+    </section>
+
+    <%= yield_content :body_end %>
+  </body>
+</html>

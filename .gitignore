@@ -1,0 +1,10 @@
+.bundle
+.cache
+.DS_Store
+.sass-cache
+build/
+aws_credentials.csv
+.s3_sync
+
+# Local Netlify folder
+.netlify

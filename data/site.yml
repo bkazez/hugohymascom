@@ -1,0 +1,15 @@
+# middleman-meta-tags
+customize_by_frontmatter: true
+domain: www.hugohymas.com
+host: http://www.hugohymas.com # must have http for middleman-meta-tags....
+
+site: Hugo Hymas, tenor
+name: Hugo Hymas
+first_name: Hugo
+last_name: Hymas
+username: hugo.hymas
+gender: male
+fach: tenor
+description: British tenor Hugo Hymas is in much demand for his interpretations of the baroque and renaissance repertoire and enjoys collaborations with the foremost practitioners of the genre.
+
+sitemap_ignore_regex: (\.(css|js|eot|svg|woff|ttf|png|jpg|jpeg|gif|yml|mp3|zip|ics|keep|xml|ico|google)$|robots|error|widgets|tech|webmanifest)

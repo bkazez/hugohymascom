@@ -1,0 +1,20 @@
+---
+title: Press
+---
+<%
+input = File.read("data/reviews.md")
+reviews = input.split("\n\n").map do |review|
+  review.strip.split("\n").map do |review_md|
+    markdown(review_md, without_p: true)
+  end
+end
+%>
+
+<div class="row pt-2 g-4">
+  <div class="col-12">
+    <div class="text-width events">
+      <h2>Press</h2>
+      <p><%= data.reviews.join("<br>\n").join("</p>\n\n<p>") %></p>
+    </div>
+  </div>
+</div>
