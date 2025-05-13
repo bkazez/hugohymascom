@@ -314,6 +314,16 @@ h3:first-child {
   padding: 0;
 }
 
+.management {
+  background-color: white;
+  margin-bottom: $body-line-height;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 a,
 a:not([href]):not([tabindex]) {
   color: black;
