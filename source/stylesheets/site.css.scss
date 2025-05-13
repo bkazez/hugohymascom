@@ -65,12 +65,6 @@ body.home {
   .header {
     text-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
   }
-
-  .footer {
-    border-top: none;
-    margin-top: 0;
-    padding-top: 0;
-  }
 }
 
 .container {
@@ -96,12 +90,6 @@ body.home {
   .container-bg {
     background: url("/images/slo.jpg") no-repeat center 45% / cover;
     height: 1200px;
-  }
-
-  .header,
-  .footer,
-  a {
-    color: white !important;
   }
 
   .hamburger-menu div {
@@ -174,10 +162,6 @@ body.home {
   pointer-events: auto;
 }
 
-.header a {
-  color: black;
-}
-
 /* Each line in the navigation menu */
 .nav ul {
   list-style: none;
@@ -206,6 +190,10 @@ body.home {
 .nav li {
   text-indent: 0;
   padding-left: 0;
+}
+
+.nav a {
+  text-decoration: none;
 }
 
 .home .nav.show {
@@ -260,6 +248,7 @@ h1 a {
   line-height: 1; /* Set line-height to 1 */
   margin-bottom: $body-line-height;
   font-weight: bold;
+  text-decoration: none;
 
   .voice-type {
     text-transform: lowercase;
@@ -332,14 +321,14 @@ h3:first-child {
   padding: 0;
 }
 
-/* Needed to undo css reboot without breaking /distractionblock */
 a,
 a:not([href]):not([tabindex]) {
-  color: $accent-color;
+  color: black;
   font-weight: normal;
+  text-decoration: underline;
   &:hover {
     @extend a;
-    text-decoration: underline !important;
+    color: $accent-color;
   }
 }
 
@@ -426,7 +415,6 @@ lite-youtube::before {
 }
 
 .video-card {
-  margin-left: auto;
   margin-right: auto;
   margin-top: $body-line-height * 3;
   max-width: $video-width;
@@ -510,6 +498,14 @@ $dblock-shadow-radius: 0.65rem;
       text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
   }
+
+  .nav a {
+    color: white;
+    &:hover {
+      @extend a;
+      color: white;
+    }
+  }
 }
 
 section+section {
@@ -521,16 +517,20 @@ section+section {
 .scroll-row {
   display: flex;
   overflow-x: auto;
+  justify-content: flex-start; /* ensure left alignment */
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
 }
-.scroll-row > div {
+.scroll-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+.scroll-row .video-card {
+  max-width: 80vw;
   flex: 0 0 auto;
   width: 320px;
-  margin-right: 20px;
+  margin-right: 1rem;
 }
-.read-more-btn {
+.read-more {
   display: inline-block;
-  margin-top: 20px;
-  font-weight: bold;
 }
 

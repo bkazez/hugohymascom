@@ -5,9 +5,9 @@ css_class: home
 <section class="bio">
   <div class="container">
     <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
+      <div class="col mt-3">
         <%= markdown(File.read("data/bio-short.md")) %>
-        <a href="/about" class="read-more-btn">Read More</a> ›
+        <a href="/about" class="read-more">Read More</a> ›
       </div>
     </div>
   </div>
@@ -16,25 +16,25 @@ css_class: home
 <section class="videos">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col">
+        <h2>Videos</h2>
         <div class="scroll-row">
-          <% data.media.each do |video| %>
+          <% data.media.first(3).each do |video| %>
 		      <div class="video-card">
 		        <lite-youtube
 		          videoid="<%= video[:media] %>"
 		          playlabel="<%= video[:title] %>"
 		          posterquality="maxresdefault"
-		          params="rel=0"
-		          ></lite-youtube>
+		          params="rel=0"></lite-youtube>
 		        <div class="video-title"><%= video[:title] %></div>
 
 		        <% if video[:credit].present? %>
-		          <div class="credit"><%= video[:credit] %></p>
+		          <div class="credit"><%= video[:credit] %></div>
 		        <% end %>
 		      </div>
           <% end %>
         </div>
-        <a href="/watch-listen" class="read-more-btn">View All Videos</a> ›
+        <a href="/watch-listen" class="read-more">All Videos</a> ›
       </div>
     </div>
   </div>
@@ -43,8 +43,8 @@ css_class: home
 <section class="calendar">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <h2>Upcoming Highlights</h2>
+      <div class="col">
+        <h2>Upcoming</h2>
         <ul class="list-unstyled">
           <% future_events(data.events).first(3).each do |event| %>
             <li class="mb-2">
@@ -53,7 +53,7 @@ css_class: home
             </li>
           <% end %>
         </ul>
-        <a href="/schedule" class="read-more-btn">Full Schedule</a> ›
+        <a href="/schedule" class="read-more">Full Schedule</a> ›
       </div>
     </div>
   </div>
