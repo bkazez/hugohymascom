@@ -296,7 +296,7 @@ h2 {
 }
 
 h2:first-child {
-  margin-top: $body-line-height;
+  margin-top: 0;
 }
 
 h3 {
@@ -506,7 +506,8 @@ $dblock-shadow-radius: 0.65rem;
 }
 
 section+section {
-  margin-top: $body-line-height !important;
+  margin-top: $body-line-height * 1.5 !important;
+  padding-top: $body-line-height * 1.5 !important;
   border-top: $separator-border;
 }
 
@@ -514,6 +515,7 @@ section+section {
   display: flex;
   overflow-x: auto;
   margin-right: -3rem; /* full bleed */
+  margin-bottom: $body-line-height;
   justify-content: flex-start; /* ensure left alignment */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
