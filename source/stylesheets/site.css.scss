@@ -230,6 +230,7 @@ body.home {
 
 .footer {
   padding-top: $body-line-height * 2;
+  padding-bottom: $body-line-height * 2;
   z-index: 999;
 }
 
@@ -287,7 +288,6 @@ img.flow {
 }
 
 h2 {
-  padding-top: $leadin-line-height;
   font-size: $body-font-size;
   margin-top: $body-line-height * 2;
   margin-bottom: $body-line-height;
@@ -296,7 +296,7 @@ h2 {
 }
 
 h2:first-child {
-  margin-top: $leadin-line-height;
+  margin-top: $body-line-height;
 }
 
 h3 {
@@ -304,13 +304,6 @@ h3 {
   margin-top: 2 * $body-line-height;
   margin-bottom: $body-line-height;
   line-height: $body-line-height;
-  text-transform: uppercase;
-}
-
-.events h3 {
-  text-transform: none;
-  margin-top: $body-line-height;
-  margin-bottom: 0;
 }
 
 h3:first-child {
@@ -380,24 +373,24 @@ li {
 /* Events */
 
 .events {
-  ul {
-    margin: 0;
-  }
-
-  .event-container {
+  .event {
     margin-bottom: $body-line-height;
-  }
+    .rep,
+    .group,
+    .leader,
+    .status {
+      color: $text-color-grey;
+    }
 
-  img {
-    margin-top: 2rem;
+    img {
+      margin-top: 2rem;
+    }
   }
+}
 
-  .event.rep,
-  .event.group,
-  .event.leader,
-  .event.status {
-    color: $text-color-grey;
-  }
+ul.events li {
+  text-indent: 0;
+  padding-left: 0;
 }
 
 /* Videos */
@@ -508,28 +501,35 @@ $dblock-shadow-radius: 0.65rem;
   }
 }
 
+.scroll-row .video-card {
+  margin-top: 0;
+}
+
 section+section {
-  margin-top: $body-line-height * 3 !important;
+  margin-top: $body-line-height !important;
   border-top: $separator-border;
-  padding-bottom: 2rem;
 }
 
 .scroll-row {
   display: flex;
   overflow-x: auto;
+  margin-right: -3rem; /* full bleed */
   justify-content: flex-start; /* ensure left alignment */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
+
+  ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
 }
-.scroll-row::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
-}
+
 .scroll-row .video-card {
   max-width: 80vw;
   flex: 0 0 auto;
   width: 320px;
   margin-right: 1rem;
 }
+
 .read-more {
   display: inline-block;
 }

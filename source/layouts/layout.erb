@@ -57,7 +57,7 @@
         <section class="footer text-center">
           <%= '<a href="/contact">Contact</a>' if !current_page.data.hide_contact_footer %>
           <div class="copyright mt-5">
-            © Copyright <%= Time.new.year %> by <%= data.site.name %><br>
+            © <%= Time.new.year %> <%= data.site.name %><br>
           </div>
         </section>
       </div>

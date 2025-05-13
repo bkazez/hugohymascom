@@ -5,7 +5,7 @@ css_class: home
 <section class="bio">
   <div class="container">
     <div class="row">
-      <div class="col mt-3">
+      <div class="col mt-3 text-width">
         <%= markdown(File.read("data/bio-short.md")) %>
         <a href="/about" class="read-more">Read More</a> ›
       </div>
@@ -34,7 +34,7 @@ css_class: home
 		      </div>
           <% end %>
         </div>
-        <a href="/watch-listen" class="read-more">All Videos</a> ›
+        <a href="/videos" class="read-more">More Videos</a> ›
       </div>
     </div>
   </div>
@@ -44,16 +44,24 @@ css_class: home
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2>Upcoming</h2>
-        <ul class="list-unstyled">
+        <h2>Upcoming Highlights</h2>
+        <ul class="list-unstyled events">
           <% future_events(data.events).first(3).each do |event| %>
-            <li class="mb-2">
-              <strong><%= event.date.strftime("%-d %B %Y") %></strong><br>
-              <%= event.title %> — <%= event.location %>
-            </li>
+          <li class="event">
+            <div class="date"><%= event.date.strftime("%B %Y") %></div>
+            <% array_wrap(event.rep).each do |rep| %>
+              <div class="rep">
+                <%= parse_rep(rep) %>
+              </div>
+            <% end %>
+
+            <% array_wrap(event.group).each do |group| %>
+              <div class="group"><%= group %></div>
+            <% end %>
+          </li>
           <% end %>
         </ul>
-        <a href="/schedule" class="read-more">Full Schedule</a> ›
+        <a href="/calendar" class="read-more">More Events</a> ›
       </div>
     </div>
   </div>
