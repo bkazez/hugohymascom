@@ -8,10 +8,10 @@ bio = File.read("data/bio.md")
 <div class="row pt-2 g-4">
   <div class="col-md-12">
     <div class="text-width">
-      <h2>About</h2>
       <div class="cropper">
         <img src="/images/about.jpg" class="flow">
       </div>
+      <h2>About</h2>
       <%= typographize(markdown(bio)) %>
     </div>
   </div>

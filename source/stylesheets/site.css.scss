@@ -13,7 +13,7 @@ $leadin-font-size: toRem(18); // 21/29
 $leadin-line-height: toRem(25);
 
 $body-background-color: #f7f7f7;
-$separator-border: 0.5px solid #d9d9d9;
+$separator-border: 0.5px solid rgba(0, 0, 0, 0.25);
 $container-fluid-width: 1100px;
 $text-color-grey: #757575;
 $text-width: 65ch;
@@ -245,7 +245,6 @@ body.generic {
 h1,
 h1 a {
   font-size: 1.8125rem;
-  font-weight: 700;
   line-height: 1; /* Set line-height to 1 */
   margin-bottom: $body-line-height;
   font-weight: bold;
@@ -496,7 +495,7 @@ $dblock-shadow-radius: 0.65rem;
       margin: 0;
       font-size: 3em;
       font-family: 'EB Garamond', serif;
-      font-weight: 600;
+      font-weight: 450;
       color: white;
       text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
@@ -524,7 +523,6 @@ section+section {
 .scroll-row {
   display: flex;
   overflow-x: auto;
-  margin-right: -3rem; /* full bleed */
   margin-bottom: $body-line-height;
   justify-content: flex-start; /* ensure left alignment */
   -webkit-overflow-scrolling: touch;
