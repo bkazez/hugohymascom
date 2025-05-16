@@ -1,8 +1,8 @@
 ---
 title: Calendar
 ---
-<div class="row pt-2 g-4">
-  <div class="col-12">
+<div class="row">
+  <div class="col">
     <div class="text-width">
       <h2>Upcoming</h2>
 
@@ -11,7 +11,7 @@ title: Calendar
       </div>
 
       <ul class="list-unstyled events">
-        <% future_events(data.events).each do |event| %>
+        <% future_events(merged_events).each do |event| %>
             <%= partial(:event, locals: { event: event }) %>
         <% end %>
       </ul>

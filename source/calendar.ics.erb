@@ -1,14 +1,14 @@
 <%=
 
 cal = Icalendar::Calendar.new
-cal.x_wr_calname = 'Hugo Hymas, tenor'
-sorted_events(data.events).reject(&:cancelled).each do |e|
+cal.x_wr_calname = "#{data.site.name}, #{data.site.fach}"
+sorted_events(merged_events).reject(&:cancelled).each do |e|
   cal.event do |cal_event|
     cal_event.dtstart = Icalendar::Values::Date.new(e.date)
 
     # Avoid needless cache invalidations from using dtstamp=Time.now
     cal_event.dtstamp = File.mtime('data/events.yml')
-    cal_event.summary = "Hugo Hymas" + (e.group.present? ? " with " + array_wrap(e.group).first : '')
+    cal_event.summary = data.site.name + (e.group.present? ? " with " + array_wrap(e.group).first : '')
     if e.rep.present?
       cal_event.description = parse_rep(array_wrap(e.rep).first, html: false)
     end

@@ -26,10 +26,10 @@ css_class: home
 		          playlabel="<%= video[:title] %>"
 		          posterquality="maxresdefault"
 		          params="rel=0"></lite-youtube>
-		        <div class="video-title"><%= video[:title] %></div>
+		        <div class="video-title"><%= markdown(video[:title], without_p: true) %></div>
 
 		        <% if video[:credit].present? %>
-		          <div class="credit"><%= video[:credit] %></div>
+		          <div class="credit"><%= markdown(video[:credit], without_p: true) %></div>
 		        <% end %>
 		      </div>
           <% end %>
@@ -46,18 +46,11 @@ css_class: home
       <div class="col">
         <h2>Upcoming Highlights</h2>
         <ul class="list-unstyled events">
-          <% future_events(data.events).first(3).each do |event| %>
+          <% future_events(merged_events).first(3).each do |event| %>
           <li class="event">
             <div class="date"><%= event.date.strftime("%B %Y") %></div>
-            <% array_wrap(event.rep).each do |rep| %>
-              <div class="rep">
-                <%= parse_rep(rep) %>
-              </div>
-            <% end %>
-
-            <% array_wrap(event.group).each do |group| %>
-              <div class="group"><%= group %></div>
-            <% end %>
+            <div class="title"><%= event.title %></div>
+            <div class="venue"><%= event.venue %></div>
           </li>
           <% end %>
         </ul>

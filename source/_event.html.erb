@@ -7,6 +7,11 @@
     <%= event.date.strftime('%-d %B %Y') %>
   </div>
 
+  <%# Events from ics will have these props %>
+  <div class="title">
+    <%= event.title %>
+  </div>
+
   <div class="venue"><%= event.venue %></div>
 
   <% array_wrap(event.rep).each do |rep| %>

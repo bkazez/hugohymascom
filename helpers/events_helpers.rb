@@ -4,6 +4,10 @@ module EventsHelpers
   MULTIVALUE_DELIMITER_REGEX = /\s*\|\s*/
   CATALOGUE_NAME_NUM_DELIMITER_REGEX = /\s*\/\s*/
 
+  def merged_events
+    data.events + data.events_remote
+  end
+
   def future_events(events)
     sorted_events(events).select { |e| first_event_date(e) >= Date.today }
   end
