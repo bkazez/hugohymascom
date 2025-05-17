@@ -306,6 +306,10 @@ h3 {
   line-height: $body-line-height;
 }
 
+section h2:first-child {
+  margin-top: 0;
+}
+
 h3:first-child {
   margin-top: 0;
 }
@@ -478,6 +482,9 @@ $dblock-shadow-radius: 0.65rem;
 .home {
   .container {
     padding-top: 0;
+    section {
+      padding-left: 1rem;
+    }
   }
 
   .row.header {
