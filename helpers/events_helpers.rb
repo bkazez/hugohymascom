@@ -4,18 +4,31 @@ module EventsHelpers
   MULTIVALUE_DELIMITER_REGEX = /\s*\|\s*/
   CATALOGUE_NAME_NUM_DELIMITER_REGEX = /\s*\/\s*/
 
-  def merged_events
-    data.events + data.events_remote
+  def all_events
+    sorted_events(events_from_data(data.events) + events_from_data(data.events_remote)).reject(&:cancelled)
   end
 
-  def future_events(events)
-    sorted_events(events).select { |e| first_event_date(e) >= Date.today }
+  def events_from_data(events_arr)
+    events_arr.map do |e|
+      if e.title.nil?
+        e.title = first_rep(e)
+      end
+      e
+    end
   end
 
-  def past_events(events, only_fancy: true)
-    sorted_events(events.select do |e|
-      !e.cancelled && first_event_date(e) < Date.today && (!only_fancy || e.fancy)
-    end)
+  def event_credit(e)
+    e['leader']&.split(MULTIVALUE_DELIMITER_REGEX)&.first || e['group']
+  end
+
+  def future_events()
+    all_events().select { |e| first_event_date(e) >= Date.today }
+  end
+
+  def past_events(only_fancy: true)
+    all_events.select do |e|
+      first_event_date(e) < Date.today && (!only_fancy || e.fancy)
+    end
   end
 
   def sorted_events(events)
@@ -66,5 +79,9 @@ module EventsHelpers
     else
       [object]
     end
+  end
+
+  def first_rep(e)
+    array_wrap(e['rep']).first.split(MULTIVALUE_DELIMITER_REGEX).first
   end
 end

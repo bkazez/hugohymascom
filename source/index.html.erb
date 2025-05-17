@@ -46,11 +46,11 @@ css_class: home
       <div class="col">
         <h2>Upcoming Highlights</h2>
         <ul class="list-unstyled events">
-          <% future_events(merged_events).first(3).each do |event| %>
+          <% future_events().first(3).each do |event| %>
           <li class="event">
             <div class="date"><%= event.date.strftime("%B %Y") %></div>
             <div class="title"><%= event.title %></div>
-            <div class="venue"><%= event.venue %></div>
+            <div class="venue"><%= event.venue %> / <%= event_credit(event) %></div>
           </li>
           <% end %>
         </ul>

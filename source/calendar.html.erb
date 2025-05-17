@@ -11,7 +11,7 @@ title: Calendar
       </div>
 
       <ul class="list-unstyled events">
-        <% future_events(merged_events).each do |event| %>
+        <% future_events().each do |event| %>
             <%= partial(:event, locals: { event: event }) %>
         <% end %>
       </ul>

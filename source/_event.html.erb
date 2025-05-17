@@ -8,27 +8,29 @@
   </div>
 
   <%# Events from ics will have these props %>
-  <div class="title">
-    <%= event.title %>
-  </div>
+  <% if event.title %>
+    <div class="title">
+      <%= event.title %>
+    </div>
+  <% else %>
+    <% array_wrap(event.rep).each do |rep| %>
+      <div class="rep">
+        <%= parse_rep(rep) %>
+      </div>
+    <% end %>
+
+    <% array_wrap(event.group).each do |group| %>
+      <div class="group"><%= group %></div>
+    <% end %>
+
+    <% if event.leader %>
+      <div class="leader">
+        <%= parse_leader(event.leader) %>
+      </div>
+    <% end %>
+  <% end %>
 
   <div class="venue"><%= event.venue %></div>
-
-  <% array_wrap(event.rep).each do |rep| %>
-    <div class="rep">
-      <%= parse_rep(rep) %>
-    </div>
-  <% end %>
-
-  <% array_wrap(event.group).each do |group| %>
-    <div class="group"><%= group %></div>
-  <% end %>
-
-  <% if event.leader %>
-    <div class="leader">
-      <%= parse_leader(event.leader) %>
-    </div>
-  <% end %>
 
   <% if data.site.show_event_images && event.image_caption.present? %>
     <p class="caption mt-1">

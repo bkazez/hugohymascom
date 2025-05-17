@@ -2,6 +2,7 @@ require 'uglifier'
 require 'open-uri'
 require 'fileutils'
 require 'yaml'
+require 'models/event.rb'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -55,18 +56,19 @@ ready do
       if cals.length == 0
         puts "No calendar events in downloaded file."
       else
-        events_array = cals.first.events.map do |event|
-          hash = {}
-
-          dtstart = event.dtstart&.value # can be either a Date or a Icalendar::Values::Helpers::ActiveSupportTimeWithZoneAdapter
+        events_array = cals.first.events.map do |ics_event|
+          dtstart = ics_event.dtstart&.value # can be either a Date or a Icalendar::Values::Helpers::ActiveSupportTimeWithZoneAdapter
           if dtstart&.respond_to?(:time)
             dtstart = dtstart.time
           end
-          hash['date'] = dtstart.to_date
-          hash['title'] = event.summary&.value
-          hash['venue'] = event.location&.value
-          hash['description'] = event.description&.value
-          hash.compact
+
+          event_hash = {}
+          event_hash['date'] = dtstart.to_date
+          event_hash['title'] = ics_event.summary&.value
+          event_hash['venue'] = ics_event.location&.value
+          event_hash['description'] = ics_event.description&.value
+
+          event_hash
         end
       end
       puts File.write(events_remote_path, events_array.to_yaml)
