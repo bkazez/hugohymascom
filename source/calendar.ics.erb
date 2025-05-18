@@ -2,7 +2,7 @@
 
 cal = Icalendar::Calendar.new
 cal.x_wr_calname = "#{data.site.name}, #{data.site.fach}"
-EventsHelpers::all_events().each do |e|
+all_events().each do |e|
   cal.event do |cal_event|
     cal_event.dtstart = Icalendar::Values::Date.new(e.date)
 
