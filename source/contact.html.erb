@@ -16,5 +16,7 @@ hide_contact_footer: true
     </div>
   <% end %>
 
-  <p>Get in touch with <%= data.site.first_name %> directly by emailing <%= mail_to(data.site.email) %>.</p>
+  <% if data.site.email %>
+    <p>Get in touch with <%= data.site.first_name %> directly by emailing <%= mail_to(data.site.email) %>.</p>
+  <% end %>
 </div>
