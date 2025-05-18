@@ -1,0 +1,5 @@
+User-agent: *
+<% sitemap.resources.select { |item| item.data.block_robots }.each do |resource| %>
+Disallow: <%= resource.url %>
+<% end %>
+Sitemap: <%= data.site.host %>/sitemap.xml

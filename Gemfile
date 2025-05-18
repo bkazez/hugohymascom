@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~> 4.6'
+gem 'concurrent-ruby', '1.3.4' 
+
+gem 'middleman', '4.5.1'
 gem 'middleman-livereload'
 gem 'middleman-meta-tags'
 gem 'middleman-minify-html'
