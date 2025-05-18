@@ -1,11 +1,55 @@
 require 'icalendar'
 
+class Event
+  def initialize(hash)
+    @data = hash
+    hash.each_key do |key|
+      define_singleton_method(key) { @data[key] }
+    end
+  end
+
+  def method_missing(name, *args, &block)
+    nil
+  end
+
+  def respond_to_missing?(name, include_private = false)
+    true
+  end
+end
+
 module EventsHelpers
   MULTIVALUE_DELIMITER_REGEX = /\s*\|\s*/
   CATALOGUE_NAME_NUM_DELIMITER_REGEX = /\s*\/\s*/
 
   def all_events
-    sorted_events(events_from_data(data.events) + events_from_data(data.events_remote)).reject(&:cancelled)
+    sorted_events(events_from_data(data.events) + events_from_data(events_remote)).reject(&:cancelled)
+  end
+
+  def events_remote
+    return @events_remote if defined?(@events_remote)
+
+    ics_url = app.data.site.calendar_ics_url
+    ics_content = URI.open(ics_url).read
+    cals = Icalendar::Calendar.parse(ics_content)
+
+    if cals.empty?
+      puts "No calendar events in downloaded file."
+      @events_remote = []
+    else
+      @events_remote = cals.first.events.map do |ics_event|
+        dtstart = ics_event.dtstart&.value
+        dtstart = dtstart.time if dtstart&.respond_to?(:time)
+        
+        Event.new({
+          date: dtstart.to_date,
+          title: ics_event.summary&.value,
+          venue: ics_event.location&.value,
+          description: ics_event.description&.value
+        })
+      end
+    end
+
+    return @events_remote
   end
 
   def events_from_data(events_arr)
@@ -78,6 +122,6 @@ module EventsHelpers
   end
 
   def first_rep(e)
-    array_wrap(e['rep']).first.split(MULTIVALUE_DELIMITER_REGEX).first
+    array_wrap(e['rep']).first&.split(MULTIVALUE_DELIMITER_REGEX)&.first
   end
 end
