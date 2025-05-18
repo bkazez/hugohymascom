@@ -50,7 +50,8 @@ css_class: home
           <li class="event">
             <div class="date"><%= event.date.strftime("%B %Y") %></div>
             <div class="title"><%= event.title %></div>
-            <div class="venue"><%= event.venue %> / <%= event_credit(event) %></div>
+            <div class="credit"><%= [event.group, event.leader&.split(EventsHelpers::MULTIVALUE_DELIMITER_REGEX)&.first].compact.join(' / ') %></div>
+            <div class="venue"><%= event.venue %></div>
           </li>
           <% end %>
         </ul>

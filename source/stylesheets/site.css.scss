@@ -193,6 +193,12 @@ body.home {
 }
 
 /* Changes the layout for desktop screens and tablets in landscape orientation */
+@media (max-width: 767px) {
+  /* Make .container behave like .container-fluid for small viewports */
+  .container {
+    max-width: 100% !important;
+  }
+}
 @media (min-width: 768px) {
   /* The hamburger menu disappears */
   .hamburger-menu {
@@ -421,11 +427,6 @@ lite-youtube::before {
     padding-top: 1rem;
     font-size: $body-font-size;
   }
-
-  .credit {
-    font-size: inherit;
-    margin-top: 0;
-  }
 }
 
 .engineering .video-card {
@@ -434,11 +435,7 @@ lite-youtube::before {
 }
 
 .credit {
-  opacity: 0.75;
-  font-size: 0.8rem;
-  font-weight: normal;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
+  color: $text-color-grey
 }
 
 /* Distractionblock */

@@ -17,10 +17,6 @@ module EventsHelpers
     end
   end
 
-  def event_credit(e)
-    e['leader']&.split(MULTIVALUE_DELIMITER_REGEX)&.first || e['group']
-  end
-
   def future_events()
     all_events().select { |e| first_event_date(e) >= Date.today }
   end

@@ -124,6 +124,7 @@ GEM
       ffi (~> 1.0)
     redcarpet (3.6.1)
     rexml (3.4.1)
+    rubypants (0.7.1)
     rubyzip (2.4.1)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -153,6 +154,7 @@ DEPENDENCIES
   middleman-meta-tags
   middleman-minify-html
   redcarpet
+  rubypants (~> 0.7.1)
   rubyzip (~> 2.3)
   tzinfo-data
   wdm (~> 0.1)
