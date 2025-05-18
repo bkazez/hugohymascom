@@ -5,14 +5,16 @@ hide_contact_footer: true
 <div class="text-center mt-5">
   <h2>Contact</h2>
   <img src="/images/contact.jpg" class="img-fluid mb-4">
-  <div class="management">
-    <img src="/images/caroline-phillips-management-logo.png">
-    <ul class="list-unstyled">
-      <li><a href="mailto:cphillips@caroline-phillips.co.uk">cphillips@caroline-phillips.co.uk</a></li>
-      <li>T: +44 (0) 1249 716 716</li>
-      <li>M: +44 (0) 7905 226 887</li>
-    </ul>
-  </div>
+  <% if mgmt = data.site.management %>
+    <div class="management">
+      <img src="<%= mgmt.logo_path %>">
+      <ul class="list-unstyled">
+        <li><%= mail_to(mgmt.email) %></li>
+        <li>T: <%= mgmt.office %></li>
+        <li>M: <%= mgmt.mobile %></li>
+      </ul>
+    </div>
+  <% end %>
 
-  <p>Get in touch with Hugo directly by emailing <a href="mailto:hugohymas@gmail.com">hugohymas@gmail.com</a>.</p>
+  <p>Get in touch with <%= data.site.first_name %> directly by emailing <%= mail_to(data.site.email) %>.</p>
 </div>

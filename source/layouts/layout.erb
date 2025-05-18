@@ -27,40 +27,38 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
   </head>
   <body class="mb-5 <%= "hide_header" if current_page.data.hide_header %> <%= current_page.data.css_class || '' %>">
-    <div class="container-bg">
-      <div class="container">
-        <div class="row header">
-          <div class="col">
-            <h1>
-              <%= current_page.url == '/' ? data.site.name : link_to(data.site.name, '/') %>
-            </h1>
-          </div>
-          <div class="col">
-            <nav class="nav">
-              <div class="hamburger-menu">
-                <%# Three lines %>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <ul>
-                <% data.site.nav.each do |item| %>
-                  <li><%= link_to item.title, item.path %></li>
-                <% end %>
-              </ul>
-            </nav>
-          </div>
+    <div class="container">
+      <div class="row header">
+        <div class="col">
+          <h1>
+            <%= current_page.url == '/' ? data.site.name : link_to(data.site.name, '/') %>
+          </h1>
         </div>
-
-        <%= yield %>
-
-        <section class="footer text-center">
-          <%= '<a href="/contact">Contact</a>' if !current_page.data.hide_contact_footer %>
-          <div class="copyright mt-5">
-            © <%= Time.new.year %> <%= data.site.name %><br>
-          </div>
-        </section>
+        <div class="col">
+          <nav class="nav">
+            <div class="hamburger-menu">
+              <%# Three lines %>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <ul>
+              <% data.site.nav.each do |item| %>
+                <li><%= link_to item.title, item.path %></li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
       </div>
+
+      <%= yield %>
+
+      <section class="footer text-center">
+        <%= '<a href="/contact">Contact</a>' if !current_page.data.hide_contact_footer %>
+        <div class="copyright mt-5">
+          © <%= Time.new.year %> <%= data.site.name %><br>
+        </div>
+      </section>
     </div>
 
     <%= yield_content :body_end %>

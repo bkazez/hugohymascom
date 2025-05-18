@@ -8,11 +8,10 @@ bio = File.read("data/bio.md")
 <div class="row pt-2 g-4">
   <div class="col">
     <div class="text-width">
-      <div class="cropper">
-        <img src="/images/about.jpg" class="flow">
-      </div>
+      <%= partial(:hero_image) %>
+
       <h2>About</h2>
-      <%= typographize(markdown(bio)) %>
+      <%= markdown(bio) %>
     </div>
   </div>
 </div>
