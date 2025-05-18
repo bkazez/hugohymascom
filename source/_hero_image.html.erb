@@ -1,0 +1,6 @@
+<% hero_image_path = current_hero_image_path() %>
+<% if hero_image_path %>
+  <div class="cropper">
+    <img src="<%= hero_image_path %>" class="flow">
+  </div>
+<% end %>

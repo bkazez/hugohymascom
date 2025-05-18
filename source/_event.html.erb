@@ -10,7 +10,7 @@
   <%# Events from ics will have these props %>
   <% if event.title %>
     <div class="title">
-      <%= event.title %>
+      <%= markdown(event.title, without_p: true) %>
     </div>
   <% else %>
     <% array_wrap(event.rep).each do |rep| %>
