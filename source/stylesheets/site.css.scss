@@ -61,24 +61,15 @@ body {
   @include common-ligatures;
 }
 
-body.home {
-  .header {
-    text-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
-  }
-}
-
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
-@media (min-width: 655px) {
-  .container-fluid {
-    padding-top: 3rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+.home .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .home .hamburger-menu div {
@@ -181,6 +172,10 @@ body.home {
   text-decoration: none;
 }
 
+.home .header {
+  text-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
+}
+
 .home .nav.show {
   background: rgba(0, 0, 0, 0.45);
 }
@@ -192,7 +187,7 @@ body.home {
 /* Changes the layout for desktop screens and tablets in landscape orientation */
 @media (max-width: 767px) {
   /* Make .container behave like .container-fluid for small viewports */
-  .container {
+  .home .container {
     max-width: 100% !important;
   }
 
