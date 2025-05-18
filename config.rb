@@ -32,8 +32,9 @@ page '/*.ics', layout: false
 page '/_redirects', layout: false
 
 ready do
-  # Unpack seo directory contents into root level
   proxy "_redirects", "netlify_redirects", ignore: true
+
+  # Unpack seo directory contents into root level
   sitemap.resources.select { |r| r.path =~ /^seo\// }.each do |r|
     proxy File.basename(r.path), r.path, ignore: false
   end

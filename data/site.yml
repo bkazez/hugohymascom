@@ -38,3 +38,9 @@ nav:
   - title: Contact
     path: /contact
     hero_image_path: /images/contact.jpg
+
+redirects:
+  /biography: /press
+  /watch-listen: /videos
+  /schedule: /calendar
+  /media: /videos
