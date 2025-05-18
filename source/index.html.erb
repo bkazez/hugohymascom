@@ -60,3 +60,21 @@ css_class: home
     </div>
   </div>
 </section>
+
+<section class="press">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Reviews</h2>
+        <ul class="list-unstyled reviews">
+          <% data.reviews.first(3).map do |review| %>
+            <%= partial(:review, locals: { review: review }) %>
+          <% end %>
+        </ul>
+
+        <a href="/press" class="read-more">More Reviews</a> ›
+      </div>
+    </div>
+  </div>
+</section>
+

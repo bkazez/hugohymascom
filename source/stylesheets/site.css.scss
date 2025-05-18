@@ -377,27 +377,26 @@ li {
   }
 }
 
-/* Events */
+/* Events/Reviews */
 
-.events {
-  .event {
+.events, .reviews {
+  li {
     margin-bottom: $body-line-height;
+    text-indent: 0;
+    padding-left: 0;
+
     .group,
     .leader,
     .status,
-    .venue {
+    .venue,
+    .source,
+    .performance {
       color: $text-color-grey;
     }
-
     img {
       margin-top: 2rem;
     }
   }
-}
-
-ul.events li {
-  text-indent: 0;
-  padding-left: 0;
 }
 
 /* Videos */

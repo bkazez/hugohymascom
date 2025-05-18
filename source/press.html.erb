@@ -1,20 +1,15 @@
 ---
 title: Press
 ---
-<%
-input = File.read("data/reviews.md")
-reviews = input.split("\n\n").map do |review|
-  review.strip.split("\n").map do |review_md|
-    markdown(review_md, without_p: true)
-  end
-end
-%>
-
 <div class="row">
   <div class="col">
-    <div class="text-width events">
+    <div class="text-width reviews">
       <h2>Press</h2>
-      <p><%= reviews.map { |review| review.join("<br>\n") }.join("</p>\n\n<p>") %></p>
+      <ul class="list-unstyled reviews">
+        <% data.reviews.map do |review| %>
+          <%= partial(:review, locals: { review: review }) %>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>
