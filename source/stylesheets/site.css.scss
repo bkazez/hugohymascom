@@ -251,7 +251,7 @@ h1 {
   }
 }
 
-.text-width p {
+.text-width p, .text-width ul {
   max-width: $text-width;
 }
 
