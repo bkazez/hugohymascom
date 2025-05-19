@@ -222,6 +222,10 @@ body {
   padding-top: $body-line-height * 2;
 }
 
+.home .footer {
+  padding-left: 0 !important;
+}
+
 .copyright {
   font-size: 0.9rem;
 }
