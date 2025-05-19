@@ -2,10 +2,10 @@
 <% if hero_image_path %>
   <div class="cropper">
     <img
-      src="/.netlify/images?url=/images/<%= hero_image_path %>&w=500&h=500&fit=cover"
+      src="/.netlify/images?url=<%= hero_image_path %>&w=500&h=500&fit=cover"
       srcset="
-        /.netlify/images?url=/images/<%= hero_image_path %>&w=500&fit=cover 1x,
-        /.netlify/images?url=/images/<%= hero_image_path %>&w=1000&fit=cover 2x"
+        /.netlify/images?url=<%= hero_image_path %>&w=500&h=500&fit=cover 1x,
+        /.netlify/images?url=<%= hero_image_path %>&w=1000&h=500&fit=cover 2x"
       class="flow">
   </div>
 <% end %>
