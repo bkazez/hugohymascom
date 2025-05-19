@@ -2,7 +2,6 @@ require 'uglifier'
 require 'open-uri'
 require 'fileutils'
 require 'yaml'
-require 'models/event.rb'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -16,6 +15,7 @@ configure :build do
   activate :minify_css
   activate :minify_javascript, compressor: ::Uglifier.new(harmony: true)
   activate :minify_html
+  activate :imageoptim, svgo: false
 end
 
 activate :directory_indexes
