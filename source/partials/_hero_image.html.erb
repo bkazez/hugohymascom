@@ -1,6 +1,11 @@
 <% hero_image_path = current_hero_image_path() %>
 <% if hero_image_path %>
   <div class="cropper">
-    <img src="<%= hero_image_path %>" class="flow">
+    <img
+      src="/.netlify/images?url=/images/<%= hero_image_path %>&w=500&h=500&fit=cover"
+      srcset="
+        /.netlify/images?url=/images/<%= hero_image_path %>&w=500&fit=cover 1x,
+        /.netlify/images?url=/images/<%= hero_image_path %>&w=1000&fit=cover 2x"
+      class="flow">
   </div>
 <% end %>
