@@ -28,6 +28,7 @@ calendar_ics_url: https://calendar.google.com/calendar/ical/835ecb72f38edf9a28e8
 nav:
   - title: Biography
     path: /about
+    hero_image_path: /images/photos/2.jpg
   - title: Press
     path: /press
   - title: Videos
