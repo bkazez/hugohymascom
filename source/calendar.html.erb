@@ -8,7 +8,7 @@ title: Calendar
 
       <ul class="list-unstyled events">
         <% future_events().each do |event| %>
-          <%= partial(:event, locals: { event: event }) %>
+          <%= partial('partials/event', locals: { event: event }) %>
         <% end %>
       </ul>
 

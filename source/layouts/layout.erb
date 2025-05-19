@@ -56,7 +56,7 @@
       <%= yield %>
 
       <section class="footer text-center">
-        <%= partial(:management) if !current_page.data.hide_contact_footer %>
+        <%= partial('partials/management') if !current_page.data.hide_contact_footer %>
         <div class="copyright mt-5">
           © <%= Time.new.year %> <%= data.site.name %><br>
         </div>

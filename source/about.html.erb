@@ -8,7 +8,7 @@ bio = File.read("data/bio.md")
 <div class="row">
   <div class="col">
     <div class="text-width">
-      <%= partial(:hero_image) %>
+      <%= partial('partials/hero_image') %>
 
       <h2>About</h2>
       <%= markdown(bio) %>

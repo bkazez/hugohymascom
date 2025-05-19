@@ -7,7 +7,7 @@ title: Press
       <h2>Press</h2>
       <ul class="list-unstyled reviews">
         <% data.reviews.map do |review| %>
-          <%= partial(:review, locals: { review: review }) %>
+          <%= partial('partials/review', locals: { review: review }) %>
         <% end %>
       </ul>
     </div>
