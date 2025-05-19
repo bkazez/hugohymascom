@@ -1,0 +1,11 @@
+<% if mgmt = data.site.management %>
+  <div class="management">
+    <p><%= data.site.management.name %> represents <%= data.site.name %> worldwide:</p>
+    <img src="<%= mgmt.logo_path %>">
+    <ul class="list-unstyled">
+      <li><%= mail_to(mgmt.email) %></li>
+      <li>T: <%= mgmt.office %></li>
+      <li>M: <%= mgmt.mobile %></li>
+    </ul>
+  </div>
+<% end %>

@@ -13,6 +13,7 @@ fach: tenor
 description: British tenor Hugo Hymas is in much demand for his interpretations of the baroque and renaissance repertoire and enjoys collaborations with the foremost practitioners of the genre.
 
 management:
+  name: Caroline Philipps
   logo_path: /images/caroline-phillips-management-logo.png
   email: cphillips@caroline-phillips.co.uk
   office: +44 (0) 1249 716 716
@@ -25,7 +26,6 @@ calendar_ics_url: https://calendar.google.com/calendar/ical/835ecb72f38edf9a28e8
 nav:
   - title: Biography
     path: /about
-    hero_image_path: /images/photos/2.jpg
   - title: Press
     path: /press
   - title: Videos
@@ -36,7 +36,6 @@ nav:
     path: /calendar
   - title: Contact
     path: /contact
-    hero_image_path: /images/contact.jpg
 
 redirects:
   /biography: /press

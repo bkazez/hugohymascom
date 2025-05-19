@@ -1,20 +1,12 @@
 ---
 title: Contact
 hide_contact_footer: true
+hero_image_path: /images/contact.jpg
 ---
 <div class="text-center mt-5">
   <h2>Contact</h2>
   <img src="/images/contact.jpg" class="img-fluid mb-4">
-  <% if mgmt = data.site.management %>
-    <div class="management">
-      <img src="<%= mgmt.logo_path %>">
-      <ul class="list-unstyled">
-        <li><%= mail_to(mgmt.email) %></li>
-        <li>T: <%= mgmt.office %></li>
-        <li>M: <%= mgmt.mobile %></li>
-      </ul>
-    </div>
-  <% end %>
+  <%= partial(:management) %>
 
   <% if data.site.email %>
     <p>Get in touch with <%= data.site.first_name %> directly by emailing <%= mail_to(data.site.email) %>.</p>
