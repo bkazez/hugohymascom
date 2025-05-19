@@ -2,12 +2,16 @@
 title: Contact
 hide_contact_footer: true
 ---
-<div class="text-center mt-5">
-  <h2>Contact</h2>
-  <img src="/images/contact.jpg" class="img-fluid mb-4">
-  <%= partial('partials/management') %>
+<div class="row">
+  <div class="col">
+    <div class="text-center mt-5">
+      <h2>Contact</h2>
+      <img src="/.netlify/images?url=/images/contact.jpg&w=1000&h=1000&fit=cover" class="img-fluid mb-4">
+      <%= partial('partials/management') %>
 
-  <% if data.site.email %>
-    <p>Get in touch with <%= data.site.first_name %> directly by emailing <%= mail_to(data.site.email) %>.</p>
-  <% end %>
+      <% if data.site.email %>
+        <p>Get in touch with <%= data.site.first_name %> directly by emailing <%= mail_to(data.site.email) %>.</p>
+      <% end %>
+    </div>
+  </div>
 </div>
