@@ -24,6 +24,8 @@
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
 
+    <%= data.site.analytics_script_tag %>
+
     <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
   </head>
   <body class="mb-5 <%= "hide_header" if current_page.data.hide_header %> <%= current_page.data.css_class || '' %>">
