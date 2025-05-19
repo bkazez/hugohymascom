@@ -1,7 +1,7 @@
 <% if mgmt = data.site.management %>
   <div class="management">
     <p><%= data.site.management.name %> represents <%= data.site.name %> worldwide:</p>
-    <img src="<%= mgmt.logo_path %>">
+    <img src="/.netlify/images?url=<%= mgmt.logo_path %>&w=550&h=550&fit=contain">
     <ul class="list-unstyled">
       <li><%= mail_to(mgmt.email) %></li>
       <li>T: <%= mgmt.office %></li>
