@@ -223,7 +223,10 @@ body {
 
 .footer {
   padding-top: $body-line-height * 2;
-  z-index: 999;
+}
+
+.copyright {
+  font-size: 0.9rem;
 }
 
 body.generic {
