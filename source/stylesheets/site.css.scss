@@ -418,6 +418,40 @@ li {
   }
 }
 
+ul.review-big {
+  float: right;
+  margin-left: 2rem;
+  max-width: 33%;
+
+  li.review {
+    margin-bottom: 0;
+  }
+
+  .quote {
+    font-size: 1.3rem;
+  }
+
+  .quote::before {
+    content: "“";
+    margin-left: -0.6rem;
+  }
+  .quote::after {
+    content: "”";
+  }
+
+  .performance {
+    display: none;
+  }
+}
+
+@media (max-width: 740px) {
+  ul.review-big {
+    float: inherit;
+    margin-left: 0;
+    max-width: inherit;
+  }
+}
+
 /* Videos */
 
 lite-youtube {

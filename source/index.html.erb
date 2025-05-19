@@ -6,6 +6,11 @@ css_class: home
   <div class="container">
     <div class="row">
       <div class="col mt-3 text-width">
+        <ul class="list-unstyled reviews review-big">
+          <% data.reviews_short.first(1).map do |review| %>
+            <%= partial('partials/review', locals: { review: review }) %>
+          <% end %>
+        </ul>
         <%= markdown(File.read("data/bio-short.md")) %>
         <a href="/about" class="read-more">Read More</a> ›
       </div>
