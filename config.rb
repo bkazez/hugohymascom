@@ -15,7 +15,7 @@ configure :build do
   activate :minify_css
   activate :minify_javascript, compressor: ::Uglifier.new(harmony: true)
   activate :minify_html
-  activate :imageoptim, svgo: false
+  activate :imageoptim, svgo: false, pngout: false
 end
 
 activate :directory_indexes
