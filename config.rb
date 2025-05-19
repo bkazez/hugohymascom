@@ -1,7 +1,6 @@
 require 'uglifier'
 require 'open-uri'
 require 'fileutils'
-require 'yaml'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
