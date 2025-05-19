@@ -1,0 +1,15 @@
+---
+title: Reviews
+---
+<div class="row">
+  <div class="col">
+    <div class="text-width reviews">
+      <h2>Reviews</h2>
+      <ul class="list-unstyled reviews">
+        <% data.reviews.map do |review| %>
+          <%= partial('partials/review', locals: { review: review }) %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
