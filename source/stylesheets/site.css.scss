@@ -265,14 +265,15 @@ img.flow {
   width: 100%;
 }
 
-@media (min-width: 430px) {
+@media (min-width: 730px) {
   .cropper {
     display: block;
     max-height: none;
     float: right;
-    width: 50%;
     min-width: 200px;
+    max-width: 45vw;
     margin-left: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
