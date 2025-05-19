@@ -369,6 +369,15 @@ li {
   margin-top: 2rem;
 }
 
+.gallery {
+  a img {
+  }
+
+  a:hover img {
+    filter: brightness(1.1);
+  }
+}
+
 .img-flow {
   max-width: 100%;
   float: none;
@@ -477,7 +486,7 @@ $dblock-shadow-radius: 0.65rem;
   }
 
   .row.header {
-    background-image: url('/images/about.jpg');
+    background-image: url('/.netlify/images?url=/images/about.jpg?w=1100&h=1100&fit=cover');
     background-size: cover;
     background-position: left;
     height: 70vh; /* adjustable */
