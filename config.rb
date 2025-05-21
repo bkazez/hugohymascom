@@ -47,7 +47,11 @@ ready do
 
   # Unpack seo directory contents into root level
   sitemap.resources.select { |r| r.path =~ /^seo\// }.each do |r|
-    proxy File.basename(r.path), r.path, ignore: true
+    proxy File.basename(r.path), r.path, ignore: false
   end
+
+  # Ignore pages that would be empty
+  photos = File.join(root, 'source', ENV['TENANT'], 'images', 'photos')
+  ignore 'photos.html' if !Dir.exist?(photos) || Dir.empty?(photos)
 end
 

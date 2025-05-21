@@ -1,5 +1,4 @@
 $accent-color: #0084ff;
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 @function toRem($size) {
   $remValue: $size / 16 * 1rem;
@@ -50,7 +49,6 @@ $text-width: 65ch;
 
 body {
   background-color: $body-background-color;
-  font-family: "EB Garamond", serif;
   line-height: $body-line-height;
   font-size: $body-font-size;
   text-rendering: geometricPrecision;
@@ -281,7 +279,7 @@ img.flow {
     max-height: none;
     float: right;
     min-width: 200px;
-    max-width: 45vw;
+    max-width: 50%;
     margin-left: 2rem;
     margin-bottom: 1rem;
   }
@@ -545,7 +543,6 @@ $dblock-shadow-radius: 0.65rem;
       bottom: 30px;
       left: 30px;
       margin: 0;
-      font-family: 'EB Garamond', serif;
       font-size: 2rem;
       letter-spacing: 7px;
       text-transform: uppercase;
@@ -597,3 +594,7 @@ section+section {
   display: inline-block;
 }
 
+
+.contact img {
+  max-height: 45vh;
+}

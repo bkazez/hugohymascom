@@ -1,0 +1,24 @@
+# middleman-meta-tags
+customize_by_frontmatter: true
+domain: www.benkazez.com
+host: http://www.benkazez.com # must have http for middleman-meta-tags....
+
+site: Ben Kazez, baritone
+name: Ben Kazez
+first_name: Ben
+last_name: Kazez
+username: benkazez
+gender: male
+fach: baritone
+description: Ben Kazez is a baritone working with many of Europe’s leading early music groups.
+keywords: baritone, baroque, san francisco, berkeley, california, britten pears, tech, apps, early music, historical performance, historically informed
+email: ben@benkazez.com
+
+homepage_items_per_section: 3 # how many reviews, events to show on homepage
+max_past_events_shown: 30
+
+sitemap_ignore_regex: (\.(css|js|eot|svg|woff|ttf|png|jpg|jpeg|gif|yml|mp3|zip|ics|keep|xml|ico|google)$|robots|error|widgets|tech|webmanifest)
+
+analytics_script_tag: '<script defer data-domain="benkazez.com" src="https://plausible.io/js/script.js"></script>'
+
+calendar_ics_url: https://p157-caldav.icloud.com/published/2/MTQxNTA5NTQ2MTQxNTA5Nd-h16523nOkELL6Sklx0n7o-4vtbJAYam1O_aTZnoO6hlfFxDZ0PauD3MJhRL_0LBh-T4AlAW-rpMYnaGryV4U

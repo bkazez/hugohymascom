@@ -1,0 +1,11 @@
+Ben Kazez is a baritone working with many of Europe’s leading early music groups.
+
+In the 2025/26 season, he sings Bach’s _Christmas Oratorio_ as a soloist with La Cetra Barockorchester and Andrea Marcon, and appears as a soloist with the Academy of Ancient Music under Laurence Cummings in a programme of cantatas by Graupner, Telemann, and Bach. He also joins Thomas Dunford’s Ensemble Jupiter for a European tour of Handel’s _Theodora_, with performances at Théâtre des Champs-Élysées, Bozar Brussels, and the Royal Chapel of Versailles.
+
+Recent soloist appearances include Pilate in Bach’s _Matthew Passion_ with the Netherlands Bach Society under Masato Suzuki, and in one-per-part performances with Johannes Leertouwer and Nieuwe Philharmonie Utrecht. He has sung solos in Zelenka with Vox Luminis in Paris, Bach cantatas at Leipzig’s Nikolaikirche in a MDR broadcast, and Kuhnau and Buxtehude at Musikfest Bremen, all under Lionel Meunier. He has also sung Handel’s _Hercules_ under Václav Luks in Barcelona and Valens in _Theodora_ under Christian Curnyn at Snape Maltings. In recital he performs regularly with Dutch Music Prize winner Laurens de Man, with appearances at Toulouse les Orgues and historic organ venues in the Netherlands and Belgium. Their programmes span from Gregorian chant to Langlais, with upcoming projects including a recording of Brahms’s _Vier ernste Gesänge_ and a recital of Schubert rarities with fortepiano.
+
+Alongside his solo work, Kazez has appeared with ensembles including the Monteverdi Choir, Netherlands Bach Society, and Vox Luminis. Performances include Charpentier’s _David et Jonathas_ with Ensemble Correspondances and Monteverdi’s _Orfeo_, _Poppea_, and _Ulisse_ at the Salzburg Festival under Sir John Eliot Gardiner.
+
+Kazez’s enthusiasm for under-recognised vocal music led him to create VMII.org, a searchable catalogue of early vocal music that now draws half a million visitors a year. He also teaches privately, with students admitted to graduate and summer programmes.
+
+After earning his master’s from London’s Guildhall School in 2018, Ben became a Britten Pears Young Artist and was awarded the Salvat Bach Grant. He has trained with Dame Emma Kirkby, Max van Egmond, Dame Sarah Connolly, Yvonne Kenny, and Martin Katz.

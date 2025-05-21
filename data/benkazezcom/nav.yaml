@@ -1,0 +1,9 @@
+- title: Biography
+  path: /about
+  hero_image_path: /images/bcn-caixa.jpg
+- title: Videos
+  path: /videos
+- title: Calendar
+  path: /calendar
+- title: Contact
+  path: /contact

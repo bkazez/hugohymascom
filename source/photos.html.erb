@@ -7,7 +7,7 @@ title: Photos
   </div>
 </div>
 <div class="row">
-  <% Dir["source/images/photos/*"].each_with_index do |path, i| %>
+  <% Dir["source/#{tenant}/images/photos/*"].each_with_index do |path, i| %>
     <% filename = File.basename(path) %>
     <div class="col-xs-12 col-sm-4 gallery">
       <div style="position: relative; width: 100%; padding-top: 100%; overflow: hidden; margin-bottom: 20px;">

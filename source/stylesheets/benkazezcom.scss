@@ -1,0 +1,36 @@
+
+/* @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=db5209ff-6615-4373-ab4d-d9a1bdb5176d&fontids=1122658,1437536,1437546"); */
+@font-face {
+    font-family: "Avenir Next Bold";
+    src:
+        url("/fonts/1122658/9e20d350-02ed-419e-8306-41e8fddafb4e.woff2")
+            format("woff2"),
+        url("Fonts/1122658/9ddb7916-058a-4e43-9880-dcb237ef42b6.woff")
+            format("woff");
+}
+@font-face {
+    font-family: "Avenir Next Medium";
+    src:
+        url("/fonts/1437536/91e99835-1d11-4c71-af9b-aed2a94329e7.woff2")
+            format("woff2"),
+        url("Fonts/1437536/4952d2e1-e0c0-46ca-b32e-c24a5882c471.woff")
+            format("woff");
+}
+@font-face {
+    font-family: "Avenir Next Medium Italic";
+    src:
+        url("/fonts/1437546/43571193-6de1-4dac-b2a5-e8365cb9dc0e.woff2")
+            format("woff2"),
+        url("Fonts/1437546/8be8a73f-6804-4351-b8e1-ff88ed20425b.woff")
+            format("woff");
+}
+
+body {
+    font-family: "Avenir Next Medium", "Avenir Medium", "Helvetica Neue", Helvetica;
+}
+
+em {
+    font-family: "Avenir Next Medium Italic", "Avenir Medium Italic",
+        "Helvetica Neue Italic", "Helvetica Italic", sans-serif;
+    font-style: normal !important;
+}

@@ -6,11 +6,14 @@ css_class: home
   <div class="container">
     <div class="row">
       <div class="col mt-3 text-width">
-        <ul class="list-unstyled reviews review-big">
-          <% tenant_data.reviews_short.first(1).map do |review| %>
-            <%= partial('partials/review', locals: { review: review }) %>
-          <% end %>
-        </ul>
+        <% if tenant_data.reviews_short %>
+          <ul class="list-unstyled reviews review-big">
+            <% tenant_data.reviews_short.first(1).map do |review| %>
+              <%= partial('partials/review', locals: { review: review }) %>
+            <% end %>
+          </ul>
+        <% end %>
+
         <%= markdown(File.read(tenant_data_file("bio-short.md"))) %>
         <a href="/about" class="read-more">Read More</a> ›
       </div>
@@ -51,7 +54,7 @@ css_class: home
       <div class="col">
         <h2>Upcoming Highlights</h2>
         <ul class="list-unstyled events">
-          <% future_events().first(3).each do |event| %>
+          <% future_events().first(tenant_data.site.homepage_items_per_section).each do |event| %>
           <li class="event">
             <div class="date"><%= event.date.strftime("%B %Y") %></div>
             <div class="title"><%= event.title %></div>
@@ -60,26 +63,33 @@ css_class: home
           </li>
           <% end %>
         </ul>
-        <a href="/calendar" class="read-more">More Events</a> ›
+
+        <% if tenant_data.events.count > tenant_data.site.homepage_items_per_section %>
+          <a href="/calendar" class="read-more">More Events</a> ›
+        <% end %>
       </div>
     </div>
   </div>
 </section>
 
-<section class="press">
-  <div class="container">
-    <div class="row">
-      <div class="col text-width">
-        <h2>Reviews</h2>
-        <ul class="list-unstyled reviews">
-          <% tenant_data.reviews.first(3).map do |review| %>
-            <%= partial('partials/review', locals: { review: review }) %>
+<% if tenant_data.reviews %>
+  <section class="press">
+    <div class="container">
+      <div class="row">
+        <div class="col text-width">
+          <h2>Reviews</h2>
+          <ul class="list-unstyled reviews">
+            <% tenant_data.reviews.first(tenant_data.site.homepage_items_per_section).map do |review| %>
+              <%= partial('partials/review', locals: { review: review }) %>
+            <% end %>
+          </ul>
+
+          <% if tenant_data.reviews.count > tenant_data.site.homepage_items_per_section %>
+            <a href="/press" class="read-more">More Reviews</a> ›
           <% end %>
-        </ul>
-
-        <a href="/press" class="read-more">More Reviews</a> ›
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+<% end %>
 

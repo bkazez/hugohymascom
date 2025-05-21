@@ -1,0 +1,1472 @@
+- date: 2026-04-03
+  venue: Amsterdam Westerkerk
+  rep: Bach _St John Passion_ | Pilate/arias
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+- date: 2025-11-30
+  venue: Amsterdam Westerkerk
+  rep: Bach Cantata 36, ‘Schwingt freudig euch empor’ | soloist
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+
+- &cetra_2025
+  date: 2025-12-05
+  venue: Stadtcasino Basel
+  rep: Bach, _Christmas Oratorio_, Cantatas I, II, III, VI | soloist
+  group:
+  - Robin Johannsen, soprano
+  - Alex Potter, alto
+  - Jakob Pilgram, tenor
+  - La Cetra Barockorchester
+  leader: Andrea Marcon | conductor
+  fancy: true
+
+- <<: *cetra_2025
+  date: 2025-12-06
+  venue: Freiburg, DE
+
+- <<: *cetra_2025
+  date: 2025-12-07
+  venue: La Chaux-de-Fonds, CH
+
+- &aam_2025
+  date: 2026-04-14
+  venue: Cambridge, UK
+  rep:
+  - Graupner ‘Lobet den Herrn alle Heiden’ | soloist
+  - Telemann ‘Ich muß auf den Bergen weinen und heulen’ | soloist
+  - Bach ‘Du wahrer Gott und Davis Sohn’ | soloist
+  group:
+  - Hilary Cronin, soprano
+  - Helen Charlston, alto
+  - Nick Pritchard, tenor 
+  - Academy of Ancient Music
+  leader: Laurence Cummings | conductor
+
+  fancy: true
+
+- <<: *aam_2025
+  date: 2026-04-16
+  venue: Milton Court Concert Hall, London
+
+- date: 2025-09-12
+  venue: Deventer, Netherlands
+  rep: Recital for dedication of an 1839 organ
+  group: Laurens de Man, organ
+  fancy: true
+
+- date: 2025-05-10
+  venue: Bing Concert Hall, Stanford University
+  rep: Haydn Theresienmesse
+  fancy: true
+
+- &nphu_2025
+  date: 2025-04-10
+  venue: Rhenen Cunerakerk
+  rep: Bach _St Matthew Passion_ | one voice per part
+  group: Nieuwe Philharmonie Utrecht
+  leader: Johannes Leertouwer | violin
+  fancy: true
+- <<: *nphu_2025
+  date: 2025-04-11
+  venue: Rotterdam Laurenskerk
+- <<: *nphu_2025
+  date: 2025-04-12
+  venue: Leiden Stadsgehoorzaal
+- <<: *nphu_2025
+  date: 2025-04-13
+  venue: Amsterdam Westerkerk
+- <<: *nphu_2025
+  date: 2025-04-15
+  venue: Breda Grote Kerk
+- <<: *nphu_2025
+  date: 2025-04-16
+  venue: Groningen Nieuwe Kerk
+- <<: *nphu_2025
+  date: 2025-04-18
+  venue: Utrecht Jacobikerk
+- <<: *nphu_2025
+  date: 2025-04-19
+  venue: Utrecht Jacobikerk
+
+- &jupiter_theodora
+  date: 2025-10-02
+  venue: Toulouse
+  rep: Handel _Theodora_
+  group: Ensemble Jupiter
+  leader: Thomas Dunford
+  fancy: true
+- <<: *jupiter_theodora
+  date: 2025-10-07
+  venue: Théâtre des Champs Elysées
+- <<: *jupiter_theodora
+  date: 2025-10-09
+  venue: Bordeaux
+- <<: *jupiter_theodora
+  date: 2025-10-10
+  venue: Royal Chapel of Versailles
+- <<: *jupiter_theodora
+  date: 2025-10-12
+  venue: Dijon, France
+- <<: *jupiter_theodora
+  date: 2025-10-13
+  venue: Montpellier, France
+- <<: *jupiter_theodora
+  date: 2025-10-15
+  venue: Bozar, Brussels
+
+- date: 2025-03-11
+  venue: Univ. of California, Santa Cruz
+  rep: Guest Artist Masterclass
+  fancy: true
+
+- date: 2025-03-11
+  venue: Stanford University
+  rep: Mozart _Vespers_ K. 339 | soloist
+  fancy: true
+
+- date: 2025-02-03
+  venue: Virginia Tech
+  rep: Guest Artist Recital
+  group:
+    - Brian Thorsett, tenor
+    - Richard Masters, piano
+  fancy: true
+
+- date: 2025-02-04
+  venue: Virginia Tech
+  rep: Guest Artist Masterclass
+  fancy: true
+
+- date: 2025-10-05
+  venue: Walburgiskerk, Zutphen, Netherlands
+  rep: Recital
+  group:
+    - Laurens de Man, organ
+  fancy: true
+
+- date: 2025-03-30
+  venue: Kapel van Het Cenakel, Tilburg, Netherlands
+  rep: Recital with Organ
+  group:
+    - Laurens de Man, organ
+  fancy: true
+
+- date: 2025-06-21
+  venue: Jacobikerk, Uithuizen, Netherlands
+  rep: Recital with Organ
+  group:
+    - Laurens de Man, organ
+  fancy: true
+
+- date: 2025-06-21
+  venue: Menkemaborg Castle, Uithuizen, Netherlands
+  rep: Recital with Organ
+  group:
+    - Laurens de Man, organ
+  fancy: true
+
+- date: 2025-11-23
+  venue: Jagthuis, Netherlands
+  rep: Rare Schubert songs
+  group:
+    - Laurens de Man, fortepiano
+  fancy: true
+
+- date: 2025-11-06
+  venue: Vessem, Netherlands
+  rep:
+  group:
+    - Laurens de Man, organ
+  fancy: true
+
+- date: 2024-09-01
+  venue: St. Mary Magdalen, Berkeley, California
+  group: Cantata Collective
+  rep:
+    - Bach Cantata 70 'Wachet, betet' | soloist
+    - Bach Cantata 12 'Weinen, klagen' | soloist
+  fancy: true
+
+- date: 2024-09-22
+  venue: Espacio Ronda, Madrid
+  group:
+    - Paula Perez Romero, violin
+  rep:
+    - Clérambault cantata ‘Polyphème’
+    - Handel cantata ‘Cuopre tal volta il cielo’
+    - Buxtehude ‘Herr, wenn ich nur dich hab’
+  fancy: true
+
+- date: 2025-03-22
+  venue: King’s Hall, Newcastle University
+  group: Newcastle Baroque
+  rep: Bach _Magnificat_, _Easter Oratorio_, and Cantata 42 | soloist
+  leader: Eric Cross | conductor
+  fancy: true
+
+- date: 2025-03-23
+  venue: Corbridge, UK
+  rep: Bach _St John Passion_ | Jesus, arias, 1/part choruses
+  group: Bishop’s Consort
+  leader: David Stancliffe | conductor
+  fancy: true
+
+- date: 2024-06-12
+  venue: Berkeley Festival Fringe
+  rep:
+    - Tunder Salve coelestis Pater
+    - Bach aria 'Hier in meines Vaters Stätte' from BWV 32
+    - Buxtehude cantata 'Ich bin eine Blume zu Saron'
+  group: Laudami Ensemble
+  fancy: false
+
+- date: 2024-09-29
+  venue: Amsterdam Westerkerk
+  rep: Bach Cantata 96, 'Herr Christ, der einge Gottessohn' | soloist
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+- date: 2024-12-26
+  venue: Amsterdam Westerkerk
+  rep:
+    - Bach Cantata 63, 'Christen, ätzet diesen Tag' | soloist
+    - Bach Cantata 248/1, 'Jauchzet, frohlocket!' | soloist
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+- date: 2025-04-18
+  venue: Amsterdam Westerkerk
+  rep: Bach _St John Passion_ | Pilate/arias
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+- date: 2024-05-23
+  venue: Saint Michael’s, Leuven, Belgium
+  rep: "From Sadness to Joy: Erlebach, Schütz, Bach"
+  group:
+    - Laurens de Man, organ
+  fancy: true
+
+- &nphu_2024
+  date: 2024-03-22
+  venue: Emmeloord Nieuw Jeruzalemkerk
+  rep: Bach _St Matthew Passion_ | Choir 2 one per part (arias, choruses, Pontifex II)
+  group: Nieuwe Philharmonie Utrecht
+  leader: Johannes Leertouwer | leader
+  fancy: true
+- <<: *nphu_2024
+  date: 2024-03-23
+  venue: Leiden Stadsgehoorzaal
+- <<: *nphu_2024
+  date: 2024-03-24
+  venue: Amsterdam Westerkerk
+
+- date: 2024-10-11
+  venue: Festival Toulouse les Orgues
+  rep: "Ode à Marie: Bach, Reger, Liszt, Schubert, Guilmant, Langlais, Ravel, Poulenc, Dupré"
+  group: Laurens de Man, organ
+  fancy: true
+
+- &graupner_2024
+  date: 2024-05-18
+  venue: Cydonia Barocca, Ghent
+  rep:
+    - Bach Cantata 158 'Der Friede sei mit dir'
+  group:
+    - Swantje Hoffmann, violin
+    - Teresa Madeira, violoncello
+  leader: Florian Heyerick | conductor/organ
+  fancy: true
+- <<: *graupner_2024
+  date: 2024-05-18
+  rep:
+    - Graupner ‘Mein Sterben macht mir keinen Schrecken’
+    - Graupner chorale suite
+  group:
+    - Swantje Hoffmann, violin
+    - Teresa Madeira, violoncello
+- <<: *graupner_2024
+  date: 2024-05-19
+  rep:
+    - Telemann cantata ‘Ich will den Kreuzweg gerne gehen’
+  group:
+    - Ann Cnop, violin
+    - Teresa Madeira, violoncello
+- <<: *graupner_2024
+  date: 2024-05-19
+  rep:
+    - Graupner trio ‘Jesus stirbt’
+  group:
+    - Viola Blache, soprano
+    - Jana Pieters, soprano
+- <<: *graupner_2024
+  date: 2024-05-19
+  rep:
+    - Graupner cantata ‘Wo der Herr nicht bei uns wäre’
+  group:
+    - Ryo Terakado, violin/leader
+- <<: *graupner_2024
+  date: 2024-05-20
+  rep:
+    - Graupner ‘Nun freut euch’
+  group:
+    - Swantje Hoffmann, violin
+    - Patrick Oliva, violin
+- <<: *graupner_2024
+  venue: Cydonia Barocca and on Flemish radio
+  date: 2024-05-20
+  rep:
+    - Bach Cantata 57 'Selig ist der Mann'
+
+- date: 2024-03-10
+  venue: Durham, UK
+  rep: Bach _St Matthew Passion_ | Choir 1 arias, Christus, 1/part choruses
+  group: Bishop’s Consort
+  leader: David Stancliffe | conductor
+  fancy: true
+
+- &correspondances_2024
+  date: 2024-12-06
+  venue: Opéra de Lille
+  rep: Charpentier _David & Jonathas_ | chorus
+  group: Ensemble Correspondances
+  leader: Sébastien Daucé | conductor
+  fancy: true
+  cancelled: true
+- <<: *correspondances_2024
+  date: 2024-12-08
+- <<: *correspondances_2024
+  date: 2024-12-10
+- <<: *correspondances_2024
+  date: 2024-12-15
+  venue: Auditorium de Lyon
+  cancelled: false
+
+- &vox_xmas_2023
+  date: 2023-12-16
+  venue: de Singel, Antwerp
+  rep:
+    - Bach _Christmas Oratorio_, Cantatas I, II, III, VI | Herod
+  group: Vox Luminis
+  leader: Lionel Meunier | leader
+  fancy: true
+- <<: *vox_xmas_2023
+  date: 2023-12-19
+  venue: Chapelle de la Trinité, Lyon
+- <<: *vox_xmas_2023
+  date: 2023-12-21
+  venue: Abbaye musicale de Malonne, Belgium
+- <<: *vox_xmas_2023
+  date: 2023-12-23
+  venue: Concertgebouw, Bruges
+
+- &vox_easter_2023
+  date: 2024-03-31
+  venue: Concertgebouw, Bruges
+  rep:
+    - Zelenka _Missa Paschalis in D_ | soloist
+    - Bach _Easter Oratorio_
+  group: Vox Luminis
+  leader: Lionel Meunier | leader
+  fancy: true
+- <<: *vox_easter_2023
+  date: 2024-04-03
+  venue: Eglise Saint-Roch, Paris
+- <<: *vox_easter_2023
+  date: 2024-04-04
+  venue: Chapelle de la Trinité, Lyon
+- <<: *vox_easter_2023
+  date: 2024-04-12
+  venue: Thüringer Bachwochen, Germany
+
+- date: 2024-04-13
+  venue: Thüringer Bachwochen, Germany
+  rep:
+    - Bach Cantata 147 'Herz und Mund'
+  group: Vox Luminis
+  leader: Lionel Meunier | leader
+  fancy: true
+
+- date: 2024-03-29
+  venue: Amsterdam Westerkerk
+  rep: Bach _St John Passion_ | Pilate/arias
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+- date: 2023-12-26
+  venue: Amsterdam Westerkerk
+  rep:
+    - Bach _Christmas Oratorio_, cantatas II and V | soloist
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+- date: 2023-11-18
+  venue: First Congregational Church, Berkeley
+  group: Chora Nova
+  rep:
+    - Bach _Magnificat in D_ | soloist
+    - Bach _Mass in B minor_, Credo | soloist
+
+- date: 2023-08-13
+  venue: Thomaskirche, Leipzig for Bach300
+  rep:
+    - Bach Cantata 46 'Schauet doch' | soloist
+  leader: Lionel Meunier | leader
+  fancy: true
+
+- date: 2023-08-16
+  venue: Nikolaikirche, Leipzig for Bach300
+  rep:
+    - Bach Cantata 46 'Schauet doch' | soloist
+    - Bach Cantata 105 'Herr, gehe nicht ins Gericht'
+    - Bach Cantata 179 'Siehe zu, daß deine Gottesfurcht'
+    - Hassler, Bodenschatz, Calvisius (from _Florilegium Portense_)
+  leader: Lionel Meunier | leader
+  fancy: true
+
+- date: 2023-09-28
+  venue: Saint Michael’s, Leuven, Belgium
+  rep:
+    - Bruhns Mein Herz ist berei' | soloist
+    - Tunder Salve coelestis Pater | soloist
+    - Biber Nisi Dominus | soloist
+  group:
+    - Paula Pérez Romero, violin
+    - Laurens de Man, organ
+  fancy: true
+
+- &massenzio_2023
+  date: 2023-09-15
+  venue: Chiesa di San Pietro, Tuscania, Italy
+  rep: Domenico Massenzio polyphony
+  leader: Andrea de Carlo | conductor
+  fancy: true
+- <<: *massenzio_2023
+  date: 2023-09-15
+  venue: Chiesa di Santa Maria della Provvidenza, Ronciglione, Italy
+- <<: *massenzio_2023
+  date: 2023-09-16
+  venue: Piazza Farnese, Caprarola, Italy
+- <<: *massenzio_2023
+  date: 2023-09-16
+  venue: Chiesa di San Pietro, Nepi, Italy
+- <<: *massenzio_2023
+  date: 2023-09-17
+  venue: Chiesa di San Silvestro, Viterbo, Italy
+- <<: *massenzio_2023
+  date: 2023-09-23
+  venue: Museo Nazionale Romano, Palazzo Altemps, Rome
+- <<: *massenzio_2023
+  date: 2023-09-24
+  venue: Museo Nazionale Romano, Palazzo Altemps, Rome
+
+- &cal_poly_bach_2024
+  date: 2024-01-20
+  venue: Cal Poly Bach Week
+  rep: Bach _St John Passion_ | Jesus
+  leader: David Arrivee | conductor
+  fancy: true
+
+- date: 2024-01-14
+  venue: St. Mary Magdalen, Berkeley, California
+  group: Cantata Collective
+  rep:
+    - Bach Cantata 140 'Wachet auf' | soloist
+    - Bach Cantata 187 'Es wartet alles auf dich' | soloist
+  fancy: true
+
+- &mvc_troyens
+  date: 2023-08-22
+  venue: La Côte Saint André
+  rep: Berlioz | Les Troyens | Part 1
+  group:
+    - Monteverdi Choir
+    - Orchestre Révolutionnaire et Romantique
+  leader: Sir John Eliot Gardiner | conductor
+
+- <<: *mvc_troyens
+  date: 2023-08-23
+  rep: Berlioz _Les Troyens_ | Part 2
+
+- <<: *mvc_troyens
+  date: 2023-08-26
+  venue: Salzburg Festival, Großes Festspielhaus
+  rep: Berlioz _Les Troyens_
+
+- <<: *mvc_troyens
+  date: 2023-08-29
+  venue: Opéra Royal, Château de Versailles
+  rep: Berlioz _Les Troyens_
+
+- <<: *mvc_troyens
+  date: 2023-09-01
+  venue: Philharmonie Berlin, Großer Saal
+  rep: Berlioz _Les Troyens_
+
+- <<: *mvc_troyens
+  date: 2023-09-03
+  venue: BBC Proms, Royal Albert Hall
+  rep: Berlioz _Les Troyens_
+
+- date: 2024-03-09
+  venue: King’s Hall, Newcastle University
+  group: Newcastle Baroque
+  rep: Bach _St John Passion_ | Jesus
+  leader: Eric Cross | conductor
+  fancy: true
+
+- &nbv_passion_2023
+  date: 2023-03-29
+  venue: Concertzaal, Tilburg, Netherlands
+  rep: Bach _St Matthew Passion_ | Pilate/Pontifex I/chorus I
+  group: Netherlands Bach Society
+  leader: Masato Suzuki | conductor
+  fancy: true
+
+- <<: *nbv_passion_2023
+  date: 2023-04-01
+  venue: St. Baafskerk, Aardenburg, Netherlands
+
+- <<: *nbv_passion_2023
+  date: 2023-04-04
+  venue: TivoliVredenburg Grote Zaal, Utrecht, Netherlands
+
+- <<: *nbv_passion_2023
+  date: 2023-04-04
+  venue: Grote Kerk, Naarden, Netherlands
+
+- <<: *nbv_passion_2023
+  date: 2023-04-07
+  venue: Grote Kerk, Naarden, Netherlands
+
+- date: 2023-02-22
+  venue: Bing Concert Hall, Stanford University
+  rep: Fauré _Requiem_ | soloist
+  group: University Singers
+  leader: Robert Huw Morgan | conductor
+  fancy: true
+
+- date: 2023-01-08
+  venue: Berkeley, California
+  rep:
+    - Bach Cantata 153, 'Schau, lieber Gott' | soloist
+    - Bach Cantata 64 'Sehet, welch eine Liebe' | soloist
+    - Bach Cantata 151 'Süßer Trost' | soloist
+  group:
+    - Cantata Collective
+  fancy: true
+
+- date: 2022-12-10
+  venue: Domein Amerloo Concertzaal, Belgium
+  rep:
+    - Bach _Christmas Oratorio_, cantatas 1–3
+    - Buxtehude 'In dulci jubilo'
+    - Stölzel 'Ach dass die Hülfe aus Zion'
+  group: Netherlands Bach Society
+  leader: Shunske Sato | direction
+  fancy: true
+
+- date: 2022-12-11
+  venue: Het Muziekgebouw aan ’t IJ, Amsterdam
+  rep:
+    - Bach _Christmas Oratorio_, cantatas 1–3
+    - Buxtehude 'In dulci jubilo'
+    - Stölzel 'Ach dass die Hülfe aus Zion'
+  group: Netherlands Bach Society
+  leader: Shunske Sato | direction
+  fancy: true
+
+- &vox_xl_2023
+  date: 2023-05-21
+  venue: Amare Concert Hall, The Hague
+  rep:
+    - J. M. Haydn _Requiem in c_
+    - Mozart _Missa in c_
+  group:
+    - Vox Luminis and B’Rock Orchestra
+  leader: Lionel Meunier | leader
+  fancy: true
+
+- <<: *vox_xl_2023
+  date: 2023-05-24
+  venue: De Singel, Antwerp
+
+- <<: *vox_xl_2023
+  date: 2023-05-25
+  venue: Bozar, Brussels
+
+- &bcsd_2023
+  date: 2023-05-05
+  venue: All Souls’ Episcopal Church, San Diego
+  rep:
+    - Bach arias, Palestrina, Carissimi, Haydn
+  group: Bach Collegium San Diego – 20th Anniversary
+  leader: Ruben Valenzuela | conductor
+  fancy: true
+
+- <<: *bcsd_2023
+  date: 2023-05-06
+  venue: Sts Constantine and Helen Greek Orthodox Church, San Diego
+
+- date: 2022-09-03
+  venue: St. Cyprian- und Corneliuskirche, Musikfest Bremen
+  rep:
+    - Pachelbel 'Jauchzet dem Herrn' | consort/soloist
+    - Kuhnau _Magnificat in C_ | consort/soloist
+  group: Vox Luminis Atelier
+  leader: Lionel Meunier | leader
+  fancy: true
+  url: https://www.musikfest-bremen.de/programm/veranstaltungs-detail-seite/wege-zu-bach
+
+- date: 2023-01-21
+  venue: Cal Poly Bach Week
+  rep: Bach Cantata 78, 'Jesu, der du meine Seele' | soloist
+  group:
+    - Tesserae Baroque
+  leader: David Arrivée | conductor
+  fancy: true
+
+- &accentus_beeth9
+  date: 2022-12-15
+  venue: La Seine Musicale, Paris
+  rep: Beethoven _Symphony No. 9_
+  group:
+    - Accentus
+    - Insula orchestra
+  leader: Laurence Equilbey | conductor
+
+- <<: *accentus_beeth9
+  date: 2022-12-17
+  venue: Queen Elisabeth Hall, Antwerp, Belgium
+
+- <<: *accentus_beeth9
+  date: 2022-12-20
+  venue: Brucknerhaus, Linz
+
+- date: 2022-12-26
+  venue: Amsterdam Westerkerk
+  rep: Zelenka Missa nativitatis Domini | soloist
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+- date: 2023-04-02
+  venue: Corbridge, UK
+  rep: Bach _St John Passion_ | Jesus, arias, 1/part choruses
+  group: Bishop’s Consort
+  leader: David Stancliffe | conductor
+  fancy: true
+
+- date: 2023-04-07
+  venue: Amsterdam Westerkerk
+  rep: Bach _St John Passion_ | Pilate/arias
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+- &stradella_2022
+  date: 2022-09-09
+  venue: Chiesa di S. Sebastiano, Ronciglione
+  rep: Massenzio | 2035 | consort/soloist
+  group: Stradella Y-Project
+  leader: Andrea de Carlo | direction
+
+- <<: *stradella_2022
+  date: 2022-09-10
+  venue: Palazzo Farnese, Caprarola, Italy
+  fancy: true
+
+- <<: *stradella_2022
+  date: 2022-09-11
+  venue: Chiesa di S. Sebastiano, Ronciglione
+
+- <<: *stradella_2022
+  date: 2022-09-12
+  venue: Museo Nazionale Romano, Palazzo Altemps
+  fancy: true
+
+- <<: *stradella_2022
+  date: 2022-09-13
+  venue: Museo Nazionale Romano, Palazzo Altemps
+  fancy: true
+
+- <<: *stradella_2022
+  date: 2022-09-14
+  venue: Museo Nazionale Romano, Palazzo Altemps
+  fancy: true
+
+- date: 2022-08-20
+  venue: St. Petri Dom, Musikfest Bremen
+  rep:
+    - CPE Bach | Magnificat
+    - JS Bach | B Minor Mass (excerpts)
+  group: Netherlands Bach Society
+  leader: Shunske Sato | direction
+  fancy: true
+
+- date: 2022-08-26
+  venue: Grote Zaal, TivoliVredenburg, Festival Oude Muziek Utrecht
+  rep:
+    - CPE Bach | Magnificat
+    - JS Bach | B Minor Mass (excerpts)
+  group: Netherlands Bach Society
+  leader: Shunske Sato | direction
+  fancy: true
+
+- date: 2022-10-18
+  venue: Grande Salle des Croisades, Château de Versailles
+  rep: Monteverdi | L’Orfeo
+  group: Les Epopées
+  leader: Stéphane Fuget | direction
+  fancy: true
+
+- date: 2022-07-22
+  venue: Festival de Beaune, France
+  rep: Monteverdi | L’Orfeo
+  group: Les Epopées
+  leader: Stéphane Fuget | direction
+  fancy: true
+
+- date: 2022-03-02
+  venue: Bing Concert Hall, Stanford University
+  rep: Mozart | Coronation Mass | soloist
+  group: University Singers
+  leader: Robert Huw Morgan | conductor
+  fancy: true
+
+- date: 2022-04-11
+  venue: Quartier des Artistes, Thiré, France
+  rep:
+    - Charpentier | Leçon de ténèbres H. 122 | soloist
+    - Charpentier | Médée | Créon excerpts
+    - Charpentier | Les arts florissants | La Discorde excerpts
+  leader: William Christie | conductor
+  fancy: true
+
+- date: 2022-03-31
+  venue: Noontime Concerts, San Francisco (streaming)
+  rep:
+    - Bach | Coffee Cantata | soloist
+  group: Albany Consort
+  leader: Jonathan Salzedo | leader
+
+- date: 2022-02-11
+  venue: Vallejo, California
+  rep:
+    - Jacquet de La Guerre | Le déluge | soloist
+    - Bach | Amore traditore / BWV 203 | soloist
+  group: Albany Consort
+
+- &pbo_b_minor
+  date: 2022-01-29
+  venue: Alice Tully Hall, New York
+  rep:
+    - Bach | Mass in B Minor
+  group: Philharmonia Baroque
+  leader: Richard Egarr | conductor
+  cancelled: true
+  fancy: true
+
+- <<: *pbo_b_minor
+  date: 2022-02-02
+  venue: Bing Concert Hall, Stanford University
+  cancelled: false
+
+- <<: *pbo_b_minor
+  date: 2022-02-04
+  venue: Herbst Theatre, San Francisco
+  image: herbst.jpg
+  cancelled: false
+
+- <<: *pbo_b_minor
+  date: 2022-02-05
+  venue: First Congregational Church, Berkeley, California
+  cancelled: false
+
+- &cc_2022
+  date: 2022-01-02
+  venue: Berkeley, California
+  rep:
+    - Bach | Schau, lieber Gott / BWV 153 | soloist
+    - Bach | Sehet, welch eine Liebe / BWV 64 | soloist
+  group:
+    - Cantata Collective
+  fancy: false
+  cancelled: true
+
+- <<: *cc_2022
+  cancelled: false
+  date: 2023-01-08
+
+- &bcsd_charpentier
+  date: 2021-12-18
+  venue: San Diego, California
+  rep:
+    - Charpentier | Messe de minuit | soloist
+    - Charpentier | In nativitatem Domini canticum / H. 416 | soloist
+  group: Bach Collegium San Diego
+  leader: Ruben Valenzuela | conductor
+  fancy: true
+
+- <<: *bcsd_charpentier
+  date: 2021-12-19
+
+- &prangins_2021
+  date: 2021-09-10
+  venue: Temple de Prangins, Switzerland
+  rep:
+    - Clérambault | Polyphème | soloist
+    - Charpentier | Les plaisirs de Versailles | Comus
+  group:
+    - Marijana Mijanović, artistic director
+    - Emmanuel Resche-Caserta, violin
+    - Florian Carré, harpsichord
+    - Prangins Baroque
+  fancy: true
+
+- <<: *prangins_2021
+  date: 2021-09-11
+
+- <<: *prangins_2021
+  date: 2021-09-12
+  venue: Château de Prangins, Switzerland
+  image: prangins_chateau.jpg
+  image_caption: "Photo: David Christiansson"
+
+- date: 2021-08-17
+  venue: Calvary Presbyterian, San Francisco
+  fancy: true
+  rep: Schumann | Dichterliebe
+  group:
+    - Maria Lukarska, piano
+
+- &apollo_israel_egypt2
+  date: 2022-02-17
+  venue: St Paul’s Episcopal, Akron, Ohio
+  rep: Handel | Israel in Egypt
+  group: Apollo’s Fire
+  leader: Jeannette Sorrell | conductor
+  fancy: false
+
+- <<: *apollo_israel_egypt2
+  date: 2022-02-18
+  venue: St Raphael Catholic Church, Bay Village, Ohio
+
+- <<: *apollo_israel_egypt2
+  date: 2022-02-19
+  venue: Temple Tifereth–Israel, Beachwood, Ohio
+
+- <<: *apollo_israel_egypt2
+  date: 2022-02-20
+  venue: First Baptist Church, Shaker Heights, Ohio
+
+- date: 2021-12-05
+  venue: Christ Church Cathedral, Cincinnati
+  rep: Handel | Messiah | soloist
+  group: Collegium Cincinnati
+  fancy: true
+  cancelled: true
+
+- &apollo_messiah_2021
+  date: 2021-12-08
+  venue: St Paul’s Episcopal, Akron, Ohio
+  rep: Handel | Messiah
+  group: Apollo’s Fire
+  leader: Nicholas McGegan | conductor
+  fancy: false
+
+- <<: *apollo_messiah_2021
+  date: 2021-12-09
+  venue: Federated Church, Chagrin Falls, Ohio
+
+- <<: *apollo_messiah_2021
+  date: 2021-12-10
+  venue: Cleveland Museum of Art
+  fancy: true
+
+- <<: *apollo_messiah_2021
+  date: 2021-12-11
+  venue: First Baptist Church, Shaker Heights, Ohio
+
+- <<: *apollo_messiah_2021
+  date: 2021-12-12
+  venue: St Raphael Catholic Church, Bay Village, Ohio
+
+- &slo_faure
+  date: 2020-04-26
+  cancelled: true
+  rep: Fauré and Poulenc Songs
+  group: San Luis Obispo Master Chorale
+  leader: Thomas Davies | conductor
+  fancy: false
+
+- date: 2021-07-17
+  venue: St Bede’s, Menlo Park, California
+  group: Albany Consort
+  rep:
+  leader: Jonathan Salzedo | leader
+
+- &apollo_israel_egypt
+  date: 2021-03-18
+  venue: St Paul’s Episcopal, Akron, Ohio
+  rep: Handel | Israel in Egypt
+  group: Apollo’s Fire
+  leader: Jeannette Sorrell | conductor
+
+- <<: *apollo_israel_egypt
+  date: 2021-03-19
+  venue: Rocky River Presbyterian, Cleveland
+  fancy: false
+
+- <<: *apollo_israel_egypt
+  date: 2021-03-20
+  venue: Temple Tifereth Israel, Cleveland
+  fancy: false
+
+- <<: *apollo_israel_egypt
+  date: 2021-03-20
+  venue: First Baptist Church, Cleveland
+  fancy: false
+
+- date: 2020-11-28
+  cancelled: true
+  venue: Palo Alto, California
+  rep: Bach Cantatas
+  group:
+    - Cantata Collective
+  fancy: true
+
+- date: 2020-11-29
+  cancelled: true
+  venue: Berkeley, California
+  rep: Bach Cantatas
+  group:
+    - Cantata Collective
+  fancy: true
+
+- &bcsd_bwv_147
+  date: 2020-12-12
+  venue: San Diego, California
+  rep:
+    - Bach | Herz und Mund und Tat und Leben / BWV 147a | soloist
+    - Vivaldi | Gloria | soloist
+  group: Bach Collegium San Diego
+  leader: Ruben Valenzuela | conductor
+  fancy: true
+
+- &luberon_b_minor
+  cancelled: true
+  venue: Apt, France
+  date: 2020-07-09
+  rep: Bach | Mass in B Minor | soloist
+  group: Chœur du Luberon
+  leader: Johan Riphagen | conductor
+  fancy: false
+- <<: *luberon_b_minor
+  date: 2020-07-10
+  venue: Salon de Provence, France
+- <<: *luberon_b_minor
+  date: 2020-07-11
+  venue: Orange, France
+- <<: *luberon_b_minor
+  date: 2020-07-12
+  venue: Forcalquier, France
+
+- &luberon_b_minor_2021
+  <<: *luberon_b_minor
+  date: 2021-05-13
+  venue: Apt, France
+- <<: *luberon_b_minor_2021
+  date: 2021-05-14
+  venue: Salon de Provence, France
+- <<: *luberon_b_minor_2021
+  date: 2021-05-15
+  venue: Orange, France
+
+- &luberon_b_minor_2022
+  <<: *luberon_b_minor
+  date: 2022-05-27
+  venue: Cathédrale de Carpentras, Provence
+  cancelled: false
+- <<: *luberon_b_minor_2022
+  date: 2022-05-28
+  venue: Collégiale Saint Laurent, Salon-de-Provence
+- <<: *luberon_b_minor_2022
+  date: 2022-05-29
+  venue: Cathédrale de Forcalquier, Provence
+
+- &may_2020_jew_alb_cons
+  cancelled: true
+  venue: San Francisco Bay Area
+  date: 2020-05-02
+  rep: Lidarti | Esther (excerpts) | soloist
+  group: Albany Consort
+  leader: Jonathan Salzedo | conductor
+- <<: *may_2020_jew_alb_cons
+  date: 2020-05-03
+  venue: Redwood City, California
+- <<: *may_2020_jew_alb_cons
+  date: 2020-06-08
+  venue: Berkeley, California
+
+- &apollo_st_matt
+  date: 2020-04-01
+  cancelled: true
+  venue: St Christopher Paris, Rocky River, Ohio
+  rep: Bach _St Matthew Passion_ | Petrus and Choir I
+  group: Apollo’s Fire
+  leader: Jeannette Sorrell | conductor
+  fancy: true
+
+- <<: *apollo_st_matt
+  date: 2020-04-02
+  venue: Early Music Columbus, Ohio
+  fancy: false
+
+- <<: *apollo_st_matt
+  date: 2020-04-03
+  venue: Severance Hall, Cleveland
+  fancy: true
+
+- <<: *apollo_st_matt
+  date: 2020-04-04
+  venue: St Paul’s Episcopal, Akron, Ohio
+  fancy: false
+
+- <<: *apollo_st_matt
+  date: 2020-04-05
+  venue: UMS Series, Hill Auditorium, Ann Arbor
+  fancy: true
+
+- &slo_faure_req
+  date: 2020-04-26
+  cancelled: true
+  venue: SLO Performing Arts Center, California
+  rep: Fauré | Requiem | soloist
+  group: San Luis Obispo Master Chorale
+  leader: Thomas Davies | conductor
+  fancy: false
+
+- <<: *slo_faure_req
+  date: 2020-11-22
+  cancelled: true
+
+- <<: *slo_faure_req
+  date: 2021-11-21
+  cancelled: true
+  fancy: true
+
+- <<: *slo_faure_req
+  date: 2022-11-20
+  cancelled: false
+  fancy: true
+
+- &westerkerk_st_john_2020
+  date: 2020-04-10
+  cancelled: true
+  venue: Amsterdam Westerkerk
+  rep: Bach _St John Passion_ | Pilate and arias
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+  image: westerkerk.jpg
+
+- <<: *westerkerk_st_john_2020
+  date: 2022-04-15
+  cancelled: false
+
+- date: 2020-05-09
+  cancelled: true
+  rep: Jommelli | Requiem
+  venue: Festival Monteverdi, Cattedrale di Cremona
+  group: Coro e Orchestra Ghislieri
+  leader: Giulio Prandi | conductor
+  fancy: true
+
+- date: 2020-02-23
+  venue: Amsterdam Westerkerk
+  rep: Bach | Jesus nahm zu sich die Zwölfe / BWV 22 | soloist
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+
+- &cinci_messiah_2019
+  date: 2019-12-07
+  venue: Christ Church Cathedral, Cincinnati
+  rep: Handel | Messiah | soloist
+  group: Collegium Cincinnati
+  leader: Kent Tritle | conductor
+  fancy: true
+
+- <<: *cinci_messiah_2019
+  date: 2019-12-08
+
+- &cc_berkeley_22
+  date: 2019-11-03
+  venue: St. Mary Magdalen, Berkeley, California
+  group: Cantata Collective
+  rep:
+    - Bach | Jesus nahm zu sich die Zwölfe / BWV 22 | soloist
+  fancy: true
+
+- <<: *cc_berkeley_22
+  date: 2019-11-02
+  venue: All Saints Episcopal, Palo Alto, California
+  fancy: false
+
+- date: 2019-10-06
+  venue: Closing Concert, Festival d’Ambronay and France.tv
+  rep:
+    - Bononcini | Te Deum
+    - Handel | Coronation Anthems
+  group: Coro e Orchestra Ghislieri
+  leader: Giulio Prandi | conductor
+  fancy: true
+
+- date: 2019-11-16
+  venue: Concertgebouw, Amsterdam
+  rep:
+    - Mozart | Requiem
+    - Jommelli | Requiem
+  group: Coro e Orchestra Ghislieri
+  leader: Giulio Prandi | conductor
+  fancy: true
+
+- date: 2019-11-17
+  venue: Kreuzkirche Herne (Deutschland) and WDR3 Radio
+  rep:
+    - Mozart | Requiem
+    - Jommelli | Miserere
+  group: Coro e Orchestra Ghislieri
+  leader: Giulio Prandi | conductor
+
+- date: 2019-04-04
+  venue: St Andrew’s Corbridge, Durham, England
+  rep: Bach _St Matthew Passion_ | Christus and Choir I soloist
+  group: Bishop’s Consort
+  leader: David Stancliffe | conductor
+  fancy: true
+
+- date: 2019-05-26
+  venue: Amsterdam Westerkerk
+  rep: Bach Cantata 86 'Wahrlich, ich sage euch' | soloist
+  group: Westerkerkkoor and Ensemble ’t Kabinet
+  leader: JanJoost van Elburg | conductor
+  fancy: true
+
+- date: 2019-05-12
+  venue: Corpus Christi College, Cambridge
+  rep: Bach Cantata 6 'Bleib bei uns' | soloist
+  group: Bishop’s Consort
+  leader: David Stancliffe | conductor
+
+- date: 2019-07-03
+  venue: Saint-Denis Festival, Basilique de Saint-Denis, Paris
+  rep: Verdi | Requiem
+  group:
+    - Monteverdi Choir
+    - Orchestre Révolutionnaire et Romantique
+  leader: Sir John Eliot Gardiner | conductor
+  fancy: true
+
+- date: 2019-07-16
+  venue: Petit Palau de la Musica Catalana
+  rep:
+    - Handel _Hercules_ | Hercules (excerpts)
+    - Bach Cantata 213 'Lasst uns sorgen' | Mercury
+  group: Ensemble BZM
+  leader: Václav Luks | conductor
+  fancy: true
+
+- date: 2019-08-07
+  rep: Monteverdi | Vespers | soloist
+  fancy: true
+  group: Bishop’s Consort
+  leader: David Stancliffe | conductor
+  venue: St Oswald’s, Durham, England
+
+- &berlioz_cellini
+  date: 2019-08-31
+  venue: Berlin Philharmonie
+  group:
+    - Monteverdi Choir
+    - Orchestre Révolutionnaire et Romantique
+  leader: Sir John Eliot Gardiner | conductor
+  rep: Berlioz | Benvenuto Cellini
+  fancy: true
+- <<: *berlioz_cellini
+  date: 2019-09-08
+  venue: Opéra Royal, Palace of Versailles
+- <<: *berlioz_cellini
+  date: 2019-09-02
+  venue: BBC Proms, Royal Albert Hall
+- <<: *berlioz_cellini
+  date: 2019-08-29
+  venue: Festival Berlioz, La Côte-St-André
+
+- date: 2019-03-17
+  venue: Berkeley, California
+  group:
+    - Cantata Collective
+    - Pacific Boychoir
+  rep:
+    - Bach Cantata 78 'Jesu, der du meine Seele' | soloist
+    - Bach Cantata 125 'Mit Fried und Freud ich fahr dahin' | soloist
+  fancy: true
+
+- &bzm_march
+  date: 2019-03-05
+  venue: CaixaForum, Palma de Mallorca
+  group: Ensemble BZM
+  leader: Daniel Tarrida | conductor
+  rep:
+    - Bach Cantata 22 'Jesus nahm zu sich' | soloist
+    - Bach Cantata 32 'Liebster Jesu' | soloist
+  fancy: true
+- <<: *bzm_march
+  date: 2019-03-03
+  venue: CaixaForum, Barcelona
+
+- date: 2019-01-20
+  venue: L’Auditori, Sala 2, Barcelona
+  group: Ensemble BZM
+  leader: Pau Jorquera | conductor
+  rep:
+    - Bach Cantata 23 'Du wahrer Gott' | soloist
+    - Bach Cantata 44 'Sie werden euch in den Bann tun' | soloist
+
+- &albcons_2019_jan
+  date: 2019-01-11
+  venue: San Francisco Bay Area
+  group: Albany Consort
+  leader: Jonathan Salzedo | leader
+  rep:
+    - Bach Cantata 205 _Der zufriedengestellte Äolus_ | soloist
+    - Monteverdi | Madrigals
+- <<: *albcons_2019_jan
+  date: 2019-01-12
+- <<: *albcons_2019_jan
+  date: 2019-01-13
+
+- &verdi_req_mvc
+  date: 2018-11-07
+  venue: Concertgebouw, Amsterdam
+  group:
+    - Monteverdi Choir
+    - Orchestre Révolutionnaire et Romantique
+  leader: Sir John Eliot Gardiner | conductor
+  rep: Verdi _Requiem_
+  fancy: true
+
+- <<: *verdi_req_mvc
+  date: 2018-11-01
+  venue: Philharmonie Gasteig, München
+  fancy: false
+- <<: *verdi_req_mvc
+  date: 2018-11-02
+  venue: Müpa Budapest
+  fancy: false
+- <<: *verdi_req_mvc
+  date: 2018-11-01
+  venue: Vienna Musikverein
+- <<: *verdi_req_mvc
+  date: 2018-10-30
+  venue: KKL Lucerne
+  fancy: false
+- <<: *verdi_req_mvc
+  date: 2018-09-20
+  venue: Duomo di Pisa
+  image: pisa_cathedral.jpg
+  fancy: false
+- <<: *verdi_req_mvc
+  date: 2018-09-16
+  venue: National Forum of Music, Wrocław
+  fancy: false
+- <<: *verdi_req_mvc
+  date: 2018-09-18
+  venue: Westminster Cathedral, London
+
+- date: 2018-07-09
+  venue: Chilton Lodge, Berkshire, England
+  group: Bishop’s Consort
+  leader: Rt Revd Dr David Stancliffe | conductor
+  rep: Handel | Acis and Galatea | Polyphemus
+  fancy: true
+
+- date: 2018-06-22
+  venue: Master of Music Recital, Milton Court Concert Hall, London
+  group:
+    - Sashi Ayyangar, piano
+    - Karin Cuéllar-Rendón, violin
+    - Alice Trocellier, viola da gamba
+    - Benedict Williams, continuo
+  rep:
+    - Bruhns Mein Herz ist bereit
+    - Rameau Aquilon et Orithie
+    - Schubert Lieder
+  fancy: true
+
+- &gsmd_cantatas_spring
+  date: 2018-05-03
+  venue: Milton Court Concert Hall, London
+  group: Guildhall Cantata Ensemble
+  leader: James Johnstone | leader
+  rep:
+    - Carissimi _Jepthe_ | Historicus
+    - Charpentier _Le reniement de St Pierre_ | Historicus
+  fancy: true
+- <<: *gsmd_cantatas_spring
+  date: 2018-05-02
+  venue: Hatchlands Park, England
+  fancy: false
+
+- date: 2018-03-31
+  venue: Snape Maltings, Aldeburgh, England
+  group: Britten–Pears Young Artist Programme
+  leader: Dame Sarah Connolly and Christian Curnyn | leaders
+  rep: Handel | Theodora | Valens
+  fancy: true
+
+- date: 2018-03-21
+  venue: London Handel Festival, St. George’s, Hanover Square, London
+  group: Guildhall Cantata Ensemble
+  leader: James Johnstone | leader
+  rep:
+    - Buxtehude cantata 'Ich habe Lust abzuscheiden' | soloist
+    - Buxtehude Cantate Domino | soloist
+    - Buxtehude cantata Jesu, meine Freude | soloist
+  fancy: true
+
+- date: 2018-03-06
+  venue: St John’s Smith Square, London
+  group: Amadè Players / benefit for Associated Countrywomen of the World
+  rep: Handel | Messiah | soloist
+
+- date: 2018-02-24
+  venue: University of San Diego, California
+  group: Angelus Concert Series
+  leader: Marianne Pfau | leader
+  rep:
+    - Bach Cantata 92, 'Ich hab in Gottes Herz und Sinn' | soloist
+    - Bach Cantata 102, 'Herr, deine Augen' | soloist
+    - Bach Cantata 179, 'Siehe zu, dass deine Gottesfurcht nicht Heuchelei sei' | soloist
+  fancy: true
+
+- &zurich_verdi_req
+  date: 2018-01-18
+  venue: Tonhalle Maag, Zürich
+  group:
+    - Monteverdi Choir
+    - Tonhalle-Orchester Zürich
+  leader: Sir John Eliot Gardiner | conductor
+  rep: Verdi _Requiem_
+  fancy: true
+
+- <<: *zurich_verdi_req
+  date: 2018-01-19
+
+- &vespers_2017
+  date: 2017-10-08
+  venue: Chapelle Royale, Versailles
+  group:
+    - Monteverdi Choir
+    - English Baroque Soloists
+  leader: Sir John Eliot Gardiner | conductor
+  rep: Monteverdi Vespers
+  fancy: true
+- <<: *vespers_2017
+  date: 2017-10-06
+  venue: Pisa Cathedral
+  image: pisa_cathedral.jpg
+- <<: *vespers_2017
+  date: 2017-06-27
+  venue: Basilique Saint-Denis, Paris
+- <<: *vespers_2017
+  date: 2017-06-24
+  venue: Festival Monteverdi, Cremona Cathedral
+
+- &mvc_berlioz_faust
+  date: 2017-08-30
+  venue: Festival Berlioz, La Côte-Saint-André, France
+  group: Monteverdi Choir Orchestre Révolutionnaire et Romantique
+  image: mvc_berlioz_st_andre.jpg
+  leader: Sir John Eliot Gardiner | conductor
+  rep: Berlioz _Damnation of Faust_
+  fancy: true
+- <<: *mvc_berlioz_faust
+  date: 2017-08-08
+  venue: BBC Proms, Royal Albert Hall
+
+- &mvc_trilogy_salzburg
+  date: 2017-07-26
+  venue: Felsenreitschule, Salzburg Festival
+  image: mvc_trilogy_salzburg.jpg
+  group:
+    - Monteverdi Choir
+    - English Baroque Soloists
+  leader: Sir John Eliot Gardiner | conductor
+  rep: Monteverdi _L’Orfeo_
+  fancy: true
+- <<: *mvc_trilogy_salzburg
+  date: 2017-07-28
+  rep: Monteverdi _Il ritorno d’Ulisse in patria_
+- <<: *mvc_trilogy_salzburg
+  date: 2017-07-29
+  rep: Monteverdi _L’incoronazione di Poppea_
+- &mvc_trilogy_venice
+  <<: *mvc_trilogy_salzburg
+  date: 2017-06-16
+  venue: Teatro La Fenice, Venice
+  image: venice_la_fenice.jpg
+  rep: Monteverdi _L’Orfeo_
+- <<: *mvc_trilogy_venice
+  date: 2017-06-17
+  rep: Monteverdi _Il ritorno d’Ulisse in patria_
+- <<: *mvc_trilogy_venice
+  date: 2017-06-18
+  rep: Monteverdi _L’incoronazione di Poppea_
+- <<: *mvc_trilogy_venice
+  date: 2017-06-20
+  rep: Monteverdi _Il ritorno d’Ulisse in patria_
+- <<: *mvc_trilogy_venice
+  date: 2017-06-21
+  rep: Monteverdi _L’incoronazione di Poppea_
+
+- date: 2017-06-10
+  venue: Grosser Saal, Leipzig Gewandhaus
+  group:
+    - Monteverdi Choir
+    - Leipzig Gewandhaus Orchestra
+  leader: Sir John Eliot Gardiner | conductor
+  rep:
+    - Mendelssohn _Three Psalms_, Op. 78
+    - Nicolai _Ein feste Burg ist unser Gott_
+    - Brahms Geistliches Lied
+  fancy: true
+# cv does some transformations:
+# - "English Baroque Soloists" => EBS
+# - collapsing of events like "MVC / EBS / Gardiner / Salzburg Festival and La Fenice" or Angelus.
+# - adds education, coaches, etc.
+# - cv - could add some skills for opera like juggling,
+
+# events page does some transformations:
+# - collapsing some events using multiple dates -
