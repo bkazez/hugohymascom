@@ -1,6 +1,12 @@
 require 'uglifier'
 require 'open-uri'
 require 'fileutils'
+require 'helpers/tenant_helpers.rb'
+
+include TenantHelpers
+
+TENANT_DIR = File.join('tenants', tenant) + '/'
+TENANTS_GLOB = File.join('tenants', '*')
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -32,9 +38,16 @@ page '/_redirects', layout: false
 ready do
   proxy "_redirects", "netlify_redirects", ignore: true
 
+  # Unpack per-singer resources into the root level
+  resources = sitemap.resources.select { |r| r.path.start_with?(TENANT_DIR) }
+  resources.each do |r|
+    proxy r.path.sub(TENANT_DIR, ''), r.path, ignore: true
+  end
+  ignore TENANTS_GLOB
+
   # Unpack seo directory contents into root level
   sitemap.resources.select { |r| r.path =~ /^seo\// }.each do |r|
-    proxy File.basename(r.path), r.path, ignore: false
+    proxy File.basename(r.path), r.path, ignore: true
   end
 end
 

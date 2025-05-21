@@ -1,0 +1,1 @@
+British tenor Hugo Hymas is in much demand for his interpretations of the baroque and renaissance repertoire. His 24/25 season includes _St John Passion_ with OAE / Cohen, his début with Les Violons du Roy, _Esther_ with The English Concert, and _Messiah_ under Ivor Bolton.

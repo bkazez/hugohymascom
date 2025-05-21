@@ -1,19 +1,19 @@
 <%=
 
 cal = Icalendar::Calendar.new
-cal.x_wr_calname = "#{data.site.name}, #{data.site.fach}"
+cal.x_wr_calname = "#{tenant_data.site.name}, #{tenant_data.site.fach}"
 all_events().each do |e|
   cal.event do |cal_event|
     cal_event.dtstart = Icalendar::Values::Date.new(e.date)
 
     # Avoid needless cache invalidations from using dtstamp=Time.now
-    cal_event.dtstamp = File.mtime('data/events.yml')
-    cal_event.summary = data.site.name + (e.group.present? ? " with " + array_wrap(e.group).first : '')
+    cal_event.dtstamp = File.mtime(File.join(tenant_data_file('events.yml'))
+    cal_event.summary = tenant_data.site.name + (e.group.present? ? " with " + array_wrap(e.group).first : '')
     if e.rep.present?
       cal_event.description = parse_rep(array_wrap(e.rep).first, html: false)
     end
     cal_event.location = e.venue
-    cal_event.url = data.site.domain + "/calendar"
+    cal_event.url = tenant_data.site.domain + "/calendar"
   end
 end
 

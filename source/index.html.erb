@@ -7,11 +7,11 @@ css_class: home
     <div class="row">
       <div class="col mt-3 text-width">
         <ul class="list-unstyled reviews review-big">
-          <% data.reviews_short.first(1).map do |review| %>
+          <% tenant_data.reviews_short.first(1).map do |review| %>
             <%= partial('partials/review', locals: { review: review }) %>
           <% end %>
         </ul>
-        <%= markdown(File.read("data/bio-short.md")) %>
+        <%= markdown(File.read(tenant_data_file("bio-short.md"))) %>
         <a href="/about" class="read-more">Read More</a> ›
       </div>
     </div>
@@ -24,19 +24,19 @@ css_class: home
       <div class="col">
         <h2>Videos</h2>
         <div class="scroll-row">
-          <% data.media.first(3).each do |video| %>
-		      <div class="video-card">
-		        <lite-youtube
-		          videoid="<%= video[:media] %>"
-		          playlabel="<%= video[:title] %>"
-		          posterquality="maxresdefault"
-		          params="rel=0"></lite-youtube>
-		        <div class="video-title"><%= markdown(video[:title], without_p: true) %></div>
+          <% tenant_data.media.first(3).each do |video| %>
+  		      <div class="video-card">
+  		        <lite-youtube
+  		          videoid="<%= video[:media] %>"
+  		          playlabel="<%= video[:title] %>"
+  		          posterquality="maxresdefault"
+  		          params="rel=0"></lite-youtube>
+  		        <div class="video-title"><%= markdown(video[:title], without_p: true) %></div>
 
-		        <% if video[:credit].present? %>
-		          <div class="credit"><%= markdown(video[:credit], without_p: true) %></div>
-		        <% end %>
-		      </div>
+  		        <% if video[:credit].present? %>
+  		          <div class="credit"><%= markdown(video[:credit], without_p: true) %></div>
+  		        <% end %>
+  		      </div>
           <% end %>
         </div>
         <a href="/videos" class="read-more">More Videos</a> ›
@@ -72,7 +72,7 @@ css_class: home
       <div class="col text-width">
         <h2>Reviews</h2>
         <ul class="list-unstyled reviews">
-          <% data.reviews.first(3).map do |review| %>
+          <% tenant_data.reviews.first(3).map do |review| %>
             <%= partial('partials/review', locals: { review: review }) %>
           <% end %>
         </ul>

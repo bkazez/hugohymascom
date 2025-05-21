@@ -22,31 +22,35 @@ module EventsHelpers
   CATALOGUE_NAME_NUM_DELIMITER_REGEX = /\s*\/\s*/
 
   def all_events
-    sorted_events(events_from_data(data.events) + events_from_data(events_remote)).reject(&:cancelled)
+    sorted_events(events_from_data(tenant_data.events) + events_from_data(events_remote)).reject(&:cancelled)
   end
 
   def events_remote
     return @events_remote if defined?(@events_remote)
 
-    ics_url = app.data.site.calendar_ics_url
-    ics_content = URI.open(ics_url).read
-    cals = Icalendar::Calendar.parse(ics_content)
+    begin
+      ics_url = tenant_data.site.calendar_ics_url
+      ics_content = URI.open(ics_url).read
+      cals = Icalendar::Calendar.parse(ics_content)
 
-    if cals.empty?
-      puts "No calendar events in downloaded file."
-      @events_remote = []
-    else
-      @events_remote = cals.first.events.map do |ics_event|
-        dtstart = ics_event.dtstart&.value
-        dtstart = dtstart.time if dtstart&.respond_to?(:time)
-        
-        Event.new({
-          date: dtstart.to_date,
-          title: ics_event.summary&.value,
-          venue: ics_event.location&.value,
-          description: ics_event.description&.value
-        })
+      if cals.empty?
+        puts "No calendar events in downloaded file."
+        @events_remote = []
+      else
+        @events_remote = cals.first.events.map do |ics_event|
+          dtstart = ics_event.dtstart&.value
+          dtstart = dtstart.time if dtstart&.respond_to?(:time)
+          
+          Event.new({
+            date: dtstart.to_date,
+            title: ics_event.summary&.value,
+            venue: ics_event.location&.value,
+            description: ics_event.description&.value
+          })
+        end
       end
+    rescue => e
+      puts "Event fetch failed: #{e.class} - #{e.message}"
     end
 
     return @events_remote

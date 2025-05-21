@@ -1,5 +1,5 @@
 <li class="event">
-  <% if data.site.show_event_images && sitemap.find_resource_by_path(event_image_path(event)) %>
+  <% if tenant_data.site.show_event_images && sitemap.find_resource_by_path(event_image_path(event)) %>
     <img src="<%= event_image_path(event) %>">
   <% end %>
 
@@ -32,7 +32,7 @@
 
   <div class="venue"><%= event.venue %></div>
 
-  <% if data.site.show_event_images && event.image_caption.present? %>
+  <% if tenant_data.site.show_event_images && event.image_caption.present? %>
     <p class="caption mt-1">
       <%= event.image_caption %>
     </p>

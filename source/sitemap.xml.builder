@@ -6,7 +6,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     next if resource.url =~ regex
     next if resource.data.no_sitemap
     xml.url do
-      xml.loc URI.join(data.site.host, resource.url)
+      xml.loc URI.join(tenant_data.site.host, resource.url)
       xml.lastmod Time.new.iso8601
     end
   end

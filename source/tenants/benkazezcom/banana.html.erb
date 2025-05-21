@@ -1,0 +1,111 @@
+---
+site:
+title: Bananacalc
+hide_header_and_footer: true
+---
+<% content_for :head do %>
+  <style type="text/css">
+    body {
+      background-color: white !important;
+      margin: 1rem !important;
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    }
+  </style>
+<% end %>
+<div class="row">
+  <div class="col">
+    <form style="margin: 0; padding: 0;">
+      <h2 class="mb-2 mt-0 pt-0">How many grams is your unpeeled banana?</h2>
+      <input type="text" name="mass" id="mass" onkeyup="calculate();">
+
+      <h2 class="mb-1">How ripe is it?</h2>
+      <div class="form-check" onclick="calculate();">
+        <input class="form-check-input" type="radio" id="ripeness1" name="ripeness" value="0">
+          <label class="form-check-label" for="ripeness1">Solid green</label>
+      </div>
+
+      <div class="form-check" onclick="calculate();">
+        <input class="form-check-input" type="radio" id="ripeness2" name="ripeness" value="1">
+          <label class="form-check-label" for="ripeness2">Yellow with some green</label>
+      </div>
+
+      <div class="form-check" onclick="calculate();">
+        <input class="form-check-input" type="radio" id="ripeness3" name="ripeness" value="2">
+          <label class="form-check-label" for="ripeness3">Solid yellow</label>
+      </div>
+
+      <div class="form-check" onclick="calculate();">
+        <input class="form-check-input" type="radio" id="ripeness4" name="ripeness" value="3">
+          <label class="form-check-label" for="ripeness4">Yellow with a few brown spots</label>
+      </div>
+
+      <div class="form-check" onclick="calculate();">
+        <input class="form-check-input" type="radio" id="ripeness5" name="ripeness" value="4">
+          <label class="form-check-label" for="ripeness5">Speckled</label>
+      </div>
+
+      <div class="form-check" onclick="calculate();">
+        <input class="form-check-input" type="radio" id="ripeness6" name="ripeness" value="5">
+          <label class="form-check-label" for="ripeness6">Solid brown</label>
+      </div>
+    </form>
+
+    <div id="answer">
+      <h2 class="mt-0 mb-1">Your banana contains</h2>
+      <p id="answerContent"></p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+function getSelectedRipeness() {
+  var ripenesses = document.getElementsByName("ripeness");
+  for (var i = 0; i < ripenesses.length; i++) {
+    if (ripenesses[i].checked) {
+      return parseFloat(ripenesses[i].value);
+    }
+  }
+  return null;
+}
+
+const RIPENESS_TO_BANANAGRAMS = [
+  0.627,
+  0.635,
+  0.638,
+  0.646,
+  0.667,
+  0.68,
+];
+const CARBS_PER_GRAM = 0.23;
+const CALORIES_PER_GRAM = 0.89;
+var calculate = function() {
+  var massText = document.getElementById("mass").value;
+  if (massText != "") {
+    var mass = parseFloat(massText);
+    var ripeness = getSelectedRipeness();
+    if (typeof mass === 'number' && typeof ripeness === 'number' && !isNaN(mass) && !isNaN(ripeness)) {
+      var bananagrams = Math.round(RIPENESS_TO_BANANAGRAMS[ripeness] * mass);
+      var carbs = Math.round(CARBS_PER_GRAM * bananagrams);
+      var calories = Math.round(CALORIES_PER_GRAM * bananagrams);
+      var text = "";
+
+      if (bananagrams < 1) {
+          text = "Do you even HAVE a banana?";
+      } else {
+        text += bananagrams + " grams of banana";
+        if (Math.abs(bananagrams - 69) < 0.5) {
+          text += " (nice)";
+        }
+
+        text += ", which has " + calories + " calories, " + carbs + " carbohydrates.";
+      }
+      document.getElementById("answerContent").innerText = text;
+      showAnswer = true;
+    }
+  } else {
+    showAnswer = false;
+  }
+  document.getElementById("answer").style.display = showAnswer ? "block" : "none";
+}
+document.getElementById("answer").style.display = "none";
+</script>

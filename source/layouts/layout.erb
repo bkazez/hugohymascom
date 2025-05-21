@@ -16,15 +16,15 @@
     <%= auto_display_meta_tags separator: '·' %>
 
 
-    <meta property="profile:first_name" content="<%= data.site.first_name %>">
-    <meta property="profile:last_name" content="<%= data.site.last_name %>">
-    <meta property="profile:username" content="<%= data.site.username %>">
-    <meta property="profile:gender" content="<%= data.site.gender %>">
+    <meta property="profile:first_name" content="<%= tenant_data.site.first_name %>">
+    <meta property="profile:last_name" content="<%= tenant_data.site.last_name %>">
+    <meta property="profile:username" content="<%= tenant_data.site.username %>">
+    <meta property="profile:gender" content="<%= tenant_data.site.gender %>">
 
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
 
-    <%= data.site.analytics_script_tag %>
+    <%= tenant_data.site.analytics_script_tag %>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
   </head>
@@ -33,7 +33,7 @@
       <div class="row header">
         <div class="col">
           <h1>
-            <%= current_page.url == '/' ? data.site.name : link_to(data.site.name, '/') %>
+            <%= current_page.url == '/' ? tenant_data.site.name : link_to(tenant_data.site.name, '/') %>
           </h1>
         </div>
         <div class="col">
@@ -45,7 +45,7 @@
               <div></div>
             </div>
             <ul>
-              <% data.site.nav.each do |item| %>
+              <% tenant_data.nav.each do |item| %>
                 <li><%= link_to item.title, item.path %></li>
               <% end %>
             </ul>
@@ -60,7 +60,7 @@
           <section class="footer text-center">
             <%= partial('partials/management') if !current_page.data.hide_contact_footer %>
             <div class="copyright mt-5">
-              © <%= Time.new.year %> <%= data.site.name %><br>
+              © <%= Time.new.year %> <%= tenant_data.site.name %><br>
             </div>
           </section>
         </div>
