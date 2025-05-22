@@ -4,3 +4,7 @@
 
 [build.environment]
   TENANT = "benkazezcom"
+
+[[redirects]]
+  from="/bio"
+  to="/about"
