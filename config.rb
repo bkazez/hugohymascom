@@ -49,7 +49,7 @@ ready do
   end
 
   # Ignore pages that would be empty
-  photos = File.join(root, 'source', ENV['TENANT'], 'images', 'photos')
+  photos = File.join(root, 'source', 'tenants', tenant, 'images', 'photos')
   ignore 'photos.html' if !Dir.exist?(photos) || Dir.empty?(photos)
 end
 
