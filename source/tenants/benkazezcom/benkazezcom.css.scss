@@ -30,12 +30,18 @@ body {
 }
 
 em {
-  font-family: "Avenir Next Medium Italic", "Avenir Medium Italic",
-    "Helvetica Neue Italic", "Helvetica Italic", sans-serif;
+  font-family: "Avenir Next Medium Italic", "Avenir Medium Italic", "Helvetica Neue Italic", "Helvetica Italic", sans-serif;
   font-style: normal !important;
 }
 
-.row.header {
+.home .row.header {
   background-image: url('/images/slo.jpg');
   background-position: left 25%; /* 25% down from top */
+}
+
+.header h1 {
+  letter-spacing: 0.5px;
+  font-family: "Avenir Next Bold", "Avenir Bold", "Helvetica Neue Bold", "Helvetica Bold";
+  text-transform: uppercase;
+  font-size: 2.1rem;
 }
