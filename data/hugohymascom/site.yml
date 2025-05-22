@@ -22,3 +22,5 @@ management:
   mobile: +44 (0) 7905 226 887
 
 calendar_ics_url: https://calendar.google.com/calendar/ical/835ecb72f38edf9a28e8cf666e933c6cd6559e5f9d5c05679c53186dab727e9c%40group.calendar.google.com/public/basic.ics
+
+homepage_items_per_section: 3
