@@ -13,3 +13,13 @@ module TenantHelpers
     File.join(root, 'data', tenant, filename)
   end
 end
+
+module Middleman
+  module MetaTags
+    module Helpers
+      def site_data
+        (tenant_data.site || {}).with_indifferent_access
+      end
+    end
+  end
+end
