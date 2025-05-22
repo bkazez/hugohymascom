@@ -1,9 +1,5 @@
 # Multi-Tenant Opera Singer Websites
 
-Two separate opera singer websites built with Middleman:
-- Hugo Hymas (hugohymascom) 
-- Ben Kazez (benkazezcom)
-
 ## Building Sites
 
 ```
