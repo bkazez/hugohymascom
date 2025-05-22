@@ -1,4 +1,4 @@
-name: Trigger Netlify Build Daily
+name: Trigger Netlify Builds Daily
 on:
   schedule:
     # Run at 03:00 daily
