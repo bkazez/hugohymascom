@@ -36,7 +36,14 @@ em {
 
 .home .row.header {
   background-image: url('/images/slo.jpg');
-  background-position: left 25%; /* 25% down from top */
+  background-position: left 25%; /* up from the bottom */
+}
+
+@media (max-width: 767px) {
+  .home .row.header {
+    background-size: 130%;
+    background-position: center 30%; /* up from the bottom */
+  }
 }
 
 .header h1 {
