@@ -7,17 +7,12 @@ title: Photos
   </div>
 </div>
 <div class="row">
-  <% Dir["source/#{tenant}/images/photos/*"].each_with_index do |path, i| %>
+  <% Dir["source/tenants/#{tenant}/images/photos/*"].each_with_index do |path, i| %>
     <% filename = File.basename(path) %>
     <div class="col-xs-12 col-sm-4 gallery">
       <div style="position: relative; width: 100%; padding-top: 100%; overflow: hidden; margin-bottom: 20px;">
-        <a href="/.netlify/images?url=/images/photos/<%= filename %>&w=1000&h=1000&fit=contain">
-          <img 
-            src="/.netlify/images?url=/images/photos/<%= filename %>&w=700&h=700&fit=contain"
-            srcset="
-              /.netlify/images?url=/images/photos/<%= filename %>&w=350&h=350&fit=contain 1x,
-              /.netlify/images?url=/images/photos/<%= filename %>&w=700&h=700&fit=contain 2x"
-               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        <a href="/images/photos/<%= filename %>" target="_blank">
+          <%= image_tag "/images/photos/#{filename}", style: "position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" %>
         </a>
       </div>
     </div>
