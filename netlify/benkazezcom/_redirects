@@ -1,0 +1,16 @@
+/bio          /about
+/events       /calendar
+/events.ics   /calendar.ics
+/schedule     /calendar
+/media        /videos
+
+/icalevents   /widgets
+/newsreader   /widgets
+
+/leipzig/*    /leipzig
+
+/apps         /tech
+
+/dan/family/searchForm-ist.inc.php http://www.dankazez.com/istanbul
+/dan                               http://www.dankazez.com
+/dan/Ukraine/1800s.html            https://www.crarg.org

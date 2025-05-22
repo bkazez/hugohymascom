@@ -36,8 +36,6 @@ page '/*.ics', layout: false
 page '/_redirects', layout: false
 
 ready do
-  proxy "_redirects", "netlify_redirects", ignore: true
-
   # Unpack per-singer resources into the root level
   resources = sitemap.resources.select { |r| r.path.start_with?(TENANT_DIR) }
   resources.each do |r|

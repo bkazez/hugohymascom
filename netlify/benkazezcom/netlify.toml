@@ -1,0 +1,6 @@
+[build]
+  command = "TENANT=benkazezcom bundle exec middleman build --build-dir=build/benkazezcom"
+  publish = "build"
+
+[build.environment]
+  TENANT = "benkazezcom"
