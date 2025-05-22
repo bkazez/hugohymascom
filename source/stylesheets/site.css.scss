@@ -550,6 +550,19 @@ $dblock-shadow-radius: 0.65rem;
   }
 }
 
+
+/* Mobile: reduce margins */
+@media (max-width: 767px) {
+  .home .row.header h1 {
+    left: 24px;
+    bottom: 24px;
+  }
+  .home .container section  {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 .scroll-row .video-card {
   margin-top: 0;
 }
