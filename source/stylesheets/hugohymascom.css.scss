@@ -6,4 +6,7 @@ body {
 
 .row.header {
   background-image: url('/images/about.jpg');
+  h1 {
+    text-transform: uppercase;
+  }
 }
