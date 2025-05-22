@@ -22,7 +22,8 @@ module EventsHelpers
   CATALOGUE_NAME_NUM_DELIMITER_REGEX = /\s*\/\s*/
 
   def all_events
-    sorted_events(events_from_data(tenant_data.events) + events_from_data(events_remote)).reject(&:cancelled)
+    processed_events = process_copy_from_events(tenant_data.events)
+    sorted_events(events_from_data(processed_events) + events_from_data(events_remote)).reject(&:cancelled)
   end
 
   def events_remote
@@ -127,5 +128,61 @@ module EventsHelpers
 
   def first_rep(e)
     array_wrap(e['rep']).first&.split(MULTIVALUE_DELIMITER_REGEX)&.first
+  end
+
+  # Process events with copy_from functionality
+  # Events can reference previous events by date to copy all fields,
+  # then override specific fields as needed
+  def process_copy_from_events(events)
+    return [] if events.nil?
+    
+    # Ensure we have an array to work with
+    events_array = events.is_a?(Array) ? events : []
+    
+    # Track events by date for copy_from lookup
+    # Only allows copying from events that appear earlier in the list
+    events_by_date = {}
+    processed_events = []
+    
+    # Process events in order
+    events_array.each do |event|
+      processed_event_data = nil
+      
+      if event['copy_from']
+        # This event wants to copy from a previous event
+        source_event = events_by_date[event['copy_from']]
+        
+        if source_event
+          # Copy all fields from source event
+          merged_event = source_event.dup
+          
+          # Override with any fields specified in this event
+          event.each do |key, value|
+            next if key == 'copy_from'  # Don't copy the copy_from field itself
+            merged_event[key] = value
+          end
+          
+          processed_event_data = merged_event
+          processed_events << Event.new(merged_event)
+        else
+          # Source event not found - warn and use event as-is
+          puts "Warning: copy_from date '#{event['copy_from']}' not found for event on #{event['date']}"
+          processed_event_data = event
+          processed_events << Event.new(event)
+        end
+      else
+        # Regular event
+        processed_event_data = event
+        processed_events << Event.new(event)
+      end
+      
+      # Add processed event to lookup table for future copy_from references
+      # (only if it has a date)
+      if processed_event_data && processed_event_data['date']
+        events_by_date[processed_event_data['date']] = processed_event_data
+      end
+    end
+    
+    processed_events
   end
 end
