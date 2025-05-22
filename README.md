@@ -10,11 +10,8 @@ TENANT=benkazezcom bundle exec middleman build
 ## Development
 
 ```
-cd netlify/hugohymascom
-netlify dev
-
-cd netlify/benkazezcom  
-netlify dev
+cd netlify/hugohymascom; netlify dev
+cd netlify/benkazezcom; netlify dev
 ```
 
 ## Key Info
