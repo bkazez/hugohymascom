@@ -8,5 +8,8 @@ jobs:
     name: Request Netlify Webhook
     runs-on: ubuntu-latest
     steps:
-      - name: Curl request
+      - name: Build hugohymascom
         run: curl -X POST -d {} https://api.netlify.com/build_hooks/6823adb96dd8fd3feb1b677f
+
+      - name: Build benkazezcom
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/616db80ccd70060928794c3e
