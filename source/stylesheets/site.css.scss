@@ -291,12 +291,15 @@ img.flow {
   padding: 0.5rem 1.2rem;
 }
 
+h1, h2, h3 {
+  max-width: 50%;
+}
+
 h2 {
   font-size: $body-font-size;
   margin-top: $body-line-height * 2;
   margin-bottom: $body-line-height;
-  font-size: 2rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h3 {
@@ -484,19 +487,6 @@ lite-youtube::before {
 
 .credit {
   color: $text-color-grey
-}
-
-/* Distractionblock */
-$dblock-shadow-radius: 0.65rem;
-
-.demo .col:first-child {
-  padding-left: $dblock-shadow-radius;
-  padding-right: 1rem;
-}
-
-/* allow room for shadow */
-.demo .col:last-child {
-  padding-right: $dblock-shadow-radius;
 }
 
 /* Print */

@@ -46,13 +46,34 @@ em {
   }
 }
 
-.header h1 {
-  letter-spacing: 0.5px;
+h1, h2, h3 {
   font-family: "Avenir Next Bold", "Avenir Bold", "Helvetica Neue Bold", "Helvetica Bold";
+}
+
+h1 {
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 .nav ul {
   padding-top: 1px;
 }
+
+/* Distractionblock */
+$dblock-shadow-radius: 0.65rem;
+
+.demo .col:first-child {
+  padding-left: $dblock-shadow-radius;
+  padding-right: 1rem;
+}
+
+/* allow room for shadow */
+.demo .col:last-child {
+  padding-right: $dblock-shadow-radius;
+}
+
