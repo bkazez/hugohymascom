@@ -8,3 +8,4 @@ aws_credentials.csv
 
 .netlify
 source/images_resized
+.claude/settings.local.json
