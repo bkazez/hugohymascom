@@ -7,11 +7,7 @@ hide_contact_footer: true
     <div class="text-center mt-5">
       <h1>Contact</h1>
       <img src="/images/contact.jpg" class="img-fluid mb-4">
-      <%= partial('partials/management') %>
-
-      <% if tenant_data.site.email %>
-        <p>Get in touch with <%= tenant_data.site.first_name %> directly by emailing <%= mail_to(tenant_data.site.email) %>.</p>
-      <% end %>
+      <%= partial('partials/_contact') %>
     </div>
   </div>
 </div>

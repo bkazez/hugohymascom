@@ -9,3 +9,7 @@
     </ul>
   </div>
 <% end %>
+
+<% if tenant_data.site.email %>
+  <p>Get in touch with <%= tenant_data.site.first_name %> directly by emailing <%= mail_to(tenant_data.site.email) %>.</p>
+<% end %>

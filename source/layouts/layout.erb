@@ -59,7 +59,7 @@
       <div class="row">
         <div class="col">
           <section class="footer text-center">
-            <%= partial('partials/management') if !current_page.data.hide_contact_footer %>
+            <%= partial('partials/contact') if !current_page.data.hide_contact_footer %>
             <div class="copyright mt-5">
               © <%= Time.new.year %> <%= tenant_data.site.name %><br>
             </div>

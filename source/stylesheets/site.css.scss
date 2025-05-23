@@ -559,7 +559,7 @@ lite-youtube::before {
   margin-top: 0;
 }
 
-section+section {
+section+section, section.footer {
   margin-top: $body-line-height * 1.5 !important;
   padding-top: $body-line-height * 1.5 !important;
   border-top: $separator-border;
