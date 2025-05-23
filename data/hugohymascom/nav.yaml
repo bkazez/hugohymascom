@@ -1,6 +1,9 @@
+- title: Home
+  path: /
+  hero_image_path: /tenants/hugohymascom/images/about.jpg
 - title: Biography
   path: /about
-  hero_image_path: /images/photos/2.jpg
+  hero_image_path: /tenants/hugohymascom/images/photos/2.jpg
 - title: Reviews
   path: /reviews
 - title: Videos

@@ -1,6 +1,9 @@
+- title: Home
+  path: /
+  hero_image_path: /tenants/benkazezcom/images/slo.jpg
 - title: Biography
   path: /about
-  hero_image_path: /images/bcn-caixa.jpg
+  hero_image_path: /tenants/benkazezcom/images/bcn-caixa.jpg
 - title: Videos
   path: /videos
 - title: Calendar

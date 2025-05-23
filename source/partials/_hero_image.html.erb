@@ -1,6 +1,9 @@
 <% hero_image_path = current_hero_image_path() %>
 <% if hero_image_path %>
   <div class="cropper">
-    <img src="<%= hero_image_path %>" class="flow">
+    <%= responsive_image(hero_image_path, "Hero image", 
+          class: "flow",
+          sizes: [480, 768, 1024, 1440, 1920],
+          responsive_sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1200px") %>
   </div>
 <% end %>

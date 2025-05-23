@@ -2,6 +2,13 @@
 title: Home
 css_class: home
 ---
+<% content_for :head do %>
+  <% if current_hero_image_path %>
+    <style>
+      <%= responsive_background_css('.home .row.header', current_hero_image_path) %>
+    </style>
+  <% end %>
+<% end %>
 <section class="bio">
   <div class="container">
     <div class="row">

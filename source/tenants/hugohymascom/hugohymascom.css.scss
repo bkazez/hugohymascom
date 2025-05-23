@@ -15,7 +15,7 @@ h1 {
 }
 
 .home .row.header {
-  background-image: url('/images/about.jpg');
+  /* background-image set responsively in index.html.erb */
   background-position: center left;
   .logo {
     font-size: 2rem;

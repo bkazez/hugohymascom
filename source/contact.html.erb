@@ -6,7 +6,10 @@ hide_contact_footer: true
   <div class="col">
     <div class="text-center mt-5">
       <h1>Contact</h1>
-      <img src="/images/contact.jpg" class="img-fluid mb-4">
+      <%= responsive_image("/tenants/#{tenant}/images/contact.jpg", "Contact", 
+            class: "img-fluid mb-4",
+            sizes: [480, 768, 1024, 1440, 2000],
+            responsive_sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1200px") %>
       <%= partial('partials/_contact') %>
     </div>
   </div>

@@ -11,8 +11,12 @@ title: Photos
     <% filename = File.basename(path) %>
     <div class="col-xs-12 col-sm-4 gallery">
       <div style="position: relative; width: 100%; padding-top: 100%; overflow: hidden; margin-bottom: 20px;">
-        <a href="/images/photos/<%= filename %>" target="_blank">
-          <%= image_tag "/images/photos/#{filename}", style: "position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" %>
+        <a href="<%= resize_image("/tenants/#{tenant}/images/photos/#{filename}", 1920) %>" target="_blank">
+          <%= responsive_image("/tenants/#{tenant}/images/photos/#{filename}", "Photo #{i+1}", 
+                class: "",
+                sizes: [300, 600, 900],
+                responsive_sizes: "(max-width: 576px) 100vw, (max-width: 768px) 50vw, 33vw",
+                style: "position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;") %>
         </a>
       </div>
     </div>

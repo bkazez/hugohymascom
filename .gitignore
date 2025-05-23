@@ -6,5 +6,5 @@ build/
 aws_credentials.csv
 .s3_sync
 
-# Local Netlify folder
 .netlify
+source/images_resized
