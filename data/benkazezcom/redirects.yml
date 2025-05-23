@@ -11,6 +11,9 @@
 
 /apps: /tech
 
+/fr/*: /
+/it/*: /
+
 /dan/family/searchForm-ist.inc.php: http://www.dankazez.com/istanbul
 /dan: http://www.dankazez.com
 /dan/Ukraine/1800s.html: https://www.crarg.org
