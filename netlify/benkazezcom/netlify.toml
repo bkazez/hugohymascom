@@ -4,3 +4,11 @@
 
 [build.environment]
   TENANT = "benkazezcom"
+
+[dev]
+  command = "bundle exec middleman server --build-dir=build/benkazezcom --port=4568"
+  port = 8888
+  targetPort = 4568
+
+[dev.environment]
+  TENANT = "benkazezcom"

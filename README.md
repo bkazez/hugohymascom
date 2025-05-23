@@ -9,6 +9,12 @@ TENANT=benkazezcom bundle exec middleman build
 
 ## Development
 
+Preview all sites simultaneously:
+```
+./preview-all.sh
+```
+
+Or preview individual sites:
 ```
 cd netlify/hugohymascom; netlify dev
 cd netlify/benkazezcom; netlify dev

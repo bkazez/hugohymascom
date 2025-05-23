@@ -4,3 +4,11 @@
 
 [build.environment]
   TENANT = "hugohymascom"
+
+[dev]
+  command = "bundle exec middleman server --build-dir=build/hugohymascom --port=4567"
+  port = 8889
+  targetPort = 4567
+
+[dev.environment]
+  TENANT = "hugohymascom"
