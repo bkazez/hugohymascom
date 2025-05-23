@@ -94,9 +94,10 @@ module ImageHelpers
     output_filename = "#{file_parts}_#{width}w#{file_ext}"
     output_path = "images_resized/#{dir_path == '.' ? output_filename : "#{dir_path}/#{output_filename}"}"
     
-    # Full paths - source from source_dir, output to source images_resized
+    # Full paths - source from source_dir, output to appropriate directory
     source_full_path = File.join(app.source_dir, clean_path)
-    output_full_path = File.join(app.source_dir, output_path)
+    output_dir = app.development? ? app.source_dir : app.build_dir
+    output_full_path = File.join(output_dir, output_path)
     
     # Check if source exists
     unless File.exist?(source_full_path)
