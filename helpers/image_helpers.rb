@@ -98,8 +98,8 @@ module ImageHelpers
     output_path = "images_resized/#{dir_path == '.' ? output_filename : "#{dir_path}/#{output_filename}"}"
     
     # Full paths - source from source_dir, output to appropriate directory
-    source_full_path = File.join(app.source_dir, clean_path)
-    output_dir = app.development? ? app.source_dir : app.build_dir
+    source_full_path = File.join(app.config[:source], clean_path)
+    output_dir = app.development? ? app.config[:source] : app.config[:build_dir]
     output_full_path = File.join(output_dir, output_path)
     
     # Check if source exists
