@@ -14,8 +14,7 @@ title: Photos
         <a href="<%= resize_image("/tenants/#{tenant}/images/photos/#{filename}", 1920) %>" target="_blank">
           <%= responsive_image("/tenants/#{tenant}/images/photos/#{filename}", "Photo #{i+1}", 
                 class: "",
-                sizes: [300, 600, 900],
-                responsive_sizes: "(max-width: 576px) 100vw, (max-width: 768px) 50vw, 33vw",
+                sizes: [320, 400, 500],
                 style: "position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;") %>
         </a>
       </div>

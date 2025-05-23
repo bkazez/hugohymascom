@@ -16,10 +16,13 @@ module ImageHelpers
     # Use the largest size as the main src
     main_src = resize_image(source_path, sizes.last)
     
+    # Auto-generate responsive_sizes if not provided
+    responsive_sizes = options[:responsive_sizes] || generate_responsive_sizes(sizes)
+    
     img_options = {
       src: main_src,
       srcset: srcset_urls,
-      sizes: options[:responsive_sizes] || '100vw',
+      sizes: responsive_sizes,
       alt: alt_text,
       class: css_class,
       loading: 'lazy'
@@ -130,5 +133,25 @@ module ImageHelpers
     end
     
     "/#{output_path}"
+  end
+
+  private
+
+  # Generate responsive sizes string from sizes array
+  def generate_responsive_sizes(sizes)
+    return "100vw" if sizes.length <= 1
+    
+    # Sort sizes to ensure proper order
+    sorted_sizes = sizes.sort
+    
+    # Generate media queries for all but the largest size
+    media_queries = sorted_sizes[0..-2].map do |size|
+      "(max-width: #{size}px) #{size}px"
+    end
+    
+    # Add the largest size as the default (no media query)
+    media_queries << "#{sorted_sizes.last}px"
+    
+    media_queries.join(", ")
   end
 end
