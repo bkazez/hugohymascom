@@ -5,6 +5,4 @@
 build/
 aws_credentials.csv
 .s3_sync
-
 .netlify
-source/images_resized
