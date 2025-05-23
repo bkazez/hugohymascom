@@ -25,7 +25,7 @@ css_class: home
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2>Videos</h2>
+        <h1>Videos</h1>
         <div class="scroll-row">
           <% tenant_data.media.first(3).each do |video| %>
   		      <div class="video-card">
@@ -52,7 +52,7 @@ css_class: home
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2>Upcoming Highlights</h2>
+        <h1>Upcoming Highlights</h1>
         <ul class="list-unstyled events">
           <% future_events().first(tenant_data.site.homepage_items_per_section).each do |event| %>
           <li class="event">
@@ -77,7 +77,7 @@ css_class: home
     <div class="container">
       <div class="row">
         <div class="col text-width">
-          <h2>Reviews</h2>
+          <h1>Reviews</h1>
           <ul class="list-unstyled reviews">
             <% tenant_data.reviews.first(tenant_data.site.homepage_items_per_section).map do |review| %>
               <%= partial('partials/review', locals: { review: review }) %>

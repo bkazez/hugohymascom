@@ -164,8 +164,6 @@ body {
 
 .nav li {
   text-indent: 0;
-  text-transform: lowercase;
-  letter-spacing: 1px;
 }
 
 .nav a {
@@ -241,7 +239,7 @@ body.generic {
   display: none;
 }
 
-h1 {
+.logo {
   font-size: 1.5rem;
   font-weight: 450;
   line-height: 1; /* Set line-height to 1 */
@@ -252,7 +250,6 @@ h1 {
       text-decoration: underline;
     }
   }
-
 
   .voice-type {
     text-transform: lowercase;
@@ -295,25 +292,30 @@ h1, h2, h3 {
   max-width: 50%;
 }
 
-h2 {
-  font-size: $body-font-size;
-  margin-top: $body-line-height * 2;
-  margin-bottom: $body-line-height;
-  font-weight: bold;
+.text-center {
+  h1, h2, h3 {
+    max-width: inherit;
+  }
 }
 
-h3 {
+h1 {
+  font-size: 2rem;
+  margin-top: $body-line-height * 2;
+  margin-bottom: $body-line-height;
+}
+
+h2 {
   font-size: $body-font-size;
   margin-top: 2 * $body-line-height;
   margin-bottom: $body-line-height;
   line-height: $body-line-height;
 }
 
-section h2:first-child {
+section h1:first-child {
   margin-top: 0;
 }
 
-h3:first-child {
+h2:first-child {
   margin-top: 0;
 }
 
@@ -520,7 +522,7 @@ lite-youtube::before {
     display: flex;
     padding-top: 2rem;
 
-    h1 {
+    .logo {
       position: absolute;
       bottom: 30px;
       left: 30px;
@@ -543,7 +545,7 @@ lite-youtube::before {
 
 /* Mobile: reduce margins */
 @media (max-width: 767px) {
-  .home .row.header h1 {
+  .home .row.header .logo {
     left: 24px;
     bottom: 24px;
   }
@@ -606,5 +608,5 @@ section+section {
 
 
 .contact img {
-  max-height: 45vh;
+  max-height: 50vh;
 }

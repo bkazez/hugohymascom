@@ -4,14 +4,22 @@ body {
   font-family: "EB Garamond", serif;
 }
 
+h1 {
+  font-weight: normal;
+}
+
+.logo {
+  font-size: 1.5rem;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
 .home .row.header {
   background-image: url('/images/about.jpg');
   background-position: left center;
-}
-
-.header h1 {
-  letter-spacing: 7px;
-  text-transform: uppercase;
+  .logo {
+    font-size: 2rem;
+  }
 }
 
 .nav {
