@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build hugohymascom
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/6823adb96dd8fd3feb1b677f
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/68329cca0cbfe51c2587aeb5
 
       - name: Build benkazezcom
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/616db80ccd70060928794c3e
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/68329c6817bab29aa45347e6
