@@ -8,7 +8,7 @@ all_events().each do |e|
 
     # Avoid needless cache invalidations from using dtstamp=Time.now
     cal_event.dtstamp = File.mtime(File.join(tenant_data_file('events.yml')))
-    cal_event.summary = tenant_data.site.name + (e.group.present? ? " with " + array_wrap(e.group).first : '')
+    cal_event.summary = e.title.present? ? e.title : (tenant_data.site.name + (e.group.present? ? " with " + array_wrap(e.group).first : ''))
     if e.rep.present?
       cal_event.description = parse_rep(array_wrap(e.rep).first, html: false)
     end
