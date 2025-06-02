@@ -14,44 +14,6 @@
   fancy: true
   image: westerkerk.jpg
 
-
-- date: 2025-12-05
-  venue: Stadtcasino Basel
-  rep: Bach, _Christmas Oratorio_, Cantatas I, II, III, VI | soloist
-  group:
-  - Robin Johannsen, soprano
-  - Alex Potter, alto
-  - Jakob Pilgram, tenor
-  - La Cetra Barockorchester
-  leader: Andrea Marcon | conductor
-  fancy: true
-
-- date: 2025-12-06
-  copy_from: 2025-12-05
-  venue: Freiburg, DE
-
-- date: 2025-12-07
-  copy_from: 2025-12-05
-  venue: La Chaux-de-Fonds, CH
-
-- date: 2026-04-14
-  venue: Cambridge, UK
-  rep:
-  - Graupner ‘Lobet den Herrn alle Heiden’ | soloist
-  - Telemann ‘Ich muß auf den Bergen weinen und heulen’ | soloist
-  - Bach ‘Du wahrer Gott und Davis Sohn’ | soloist
-  group:
-  - Hilary Cronin, soprano
-  - Helen Charlston, alto
-  - Nick Pritchard, tenor 
-  - Academy of Ancient Music
-  leader: Laurence Cummings | conductor
-  fancy: true
-
-- copy_from: 2026-04-14
-  date: 2026-04-16
-  venue: Milton Court Concert Hall, London
-
 - date: 2025-09-12
   venue: Deventer, Netherlands
   rep: Recital for dedication of an 1839 organ
